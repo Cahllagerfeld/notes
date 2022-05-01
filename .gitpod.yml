@@ -1,0 +1,20 @@
+# List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - init: pnpm install
+    command: npm run dev
+    before: npm i -g pnpm
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: false
+    addBadge: true
+    addLabel: false
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode
+    - bradlc.vscode-tailwindcss
