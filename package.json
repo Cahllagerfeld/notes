@@ -6,7 +6,7 @@
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync",
+		"prepare": "svelte-kit sync && husky install",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -23,11 +23,14 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.4.1",
 		"mdsvex": "^0.10.5",
 		"postcss": "^8.4.12",
 		"postcss-load-config": "^3.1.4",
 		"prettier": "^2.5.1",
-		"prettier-plugin-svelte": "^2.5.0",
+		"prettier-plugin-svelte": "^2.7.0",
+		"prettier-plugin-tailwindcss": "^0.1.10",
 		"remark-wiki-link": "0.0.4",
 		"svelte": "^3.47.0",
 		"svelte-check": "^2.2.6",
@@ -36,5 +39,11 @@
 		"tslib": "^2.3.1",
 		"typescript": "~4.6.2"
 	},
-	"type": "module"
+	"type": "module",
+	"lint-staged": {
+		"*.{cjs,js,ts,css,scss,svelte}": [
+			"eslint --fix",
+			"prettier --write --plugin-search-dir=. ."
+		]
+	}
 }
