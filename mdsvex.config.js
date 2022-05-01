@@ -27,7 +27,7 @@ const config = defineConfig({
 						const match = normalizeFileName(permalink) === normalizeFileName(parsedFileName);
 						return match;
 					});
-					return result !== undefined && result.length > 0 ? [toSlug(result, dir)] : '/';
+					return result !== undefined && result.length > 0 ? [toSlug(result, dir)] : ['/'];
 				},
 				hrefTemplate: (permalink) => {
 					return `${permalink}`;
