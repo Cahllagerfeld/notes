@@ -1,4 +1,4 @@
-src/lib/contents/notes/*
+src/lib/routes/notes/*
 
 
 .DS_Store
