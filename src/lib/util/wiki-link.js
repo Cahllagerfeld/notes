@@ -58,7 +58,10 @@ export function normalizeFileName(fileName) {
  */
 export function toSlug(fileName, dir) {
 	if (fileName.includes(dir)) {
-		return (fileName = fileName.replace(dir, '').replace(/\s/g, '-').replace('.md', ''));
+		return (fileName = fileName
+			.replace(dir, '')
+			// .replace(/\s/g, '-')
+			.replace('.md', ''));
 	}
 	return '/';
 }
