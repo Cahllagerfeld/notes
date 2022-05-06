@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
+	import { goto } from '$app/navigation';
 	import { scaleLinear, scaleOrdinal } from 'd3-scale';
 	import { zoom, zoomIdentity } from 'd3-zoom';
 	import { schemeCategory10 } from 'd3-scale-chromatic';
@@ -32,7 +33,7 @@
 
 	const padding = { top: 20, right: 40, bottom: 40, left: 25 };
 
-	$: links = graph.links.map((d) => Object.create(d));
+	$: links = graph.edges.map((d) => Object.create(d));
 	$: nodes = graph.nodes.map((d) => Object.create(d));
 
 	const colourScale = d3.scaleOrdinal(d3.schemeCategory10);
@@ -134,6 +135,7 @@
 
 	{#each nodes as point}
 		<circle
+			on:click={() => goto(point.href)}
 			class="node cursor-pointer"
 			r="5"
 			fill={colourScale(point.group)}
@@ -141,7 +143,7 @@
 			cy={point.y}
 			transform="translate({transform.x} {transform.y}) scale({transform.k} {transform.k})"
 		>
-			<title>{point.id}</title></circle
+			<title>{point.title}</title></circle
 		>
 	{/each}
 </svg>
