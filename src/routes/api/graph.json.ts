@@ -4,6 +4,7 @@ import wikiLink from 'remark-wiki-link';
 import { normalizeFileName, parseFileNameFromPath, toSlug } from '$lib/util/wiki-link.js';
 import matter from 'gray-matter';
 import { compile } from 'mdsvex';
+import { mergeWith, isArray } from 'lodash';
 import type { Node, Edge } from '$lib/contents/types';
 
 export async function get() {
@@ -11,22 +12,32 @@ export async function get() {
 	const items = getMarkdownFiles(path.join(dir));
 	let nodes: Node[] = [];
 	let edges: Edge[] = [];
+	let backlinks: { [key: string]: string[] } = {};
 	for (const item of items) {
 		const sanitizedItem = toSlug(item, 'src/routes');
 		nodes = [
 			...nodes,
 			{ id: sanitizedItem, title: getFrontmatter(item).data.title, href: sanitizedItem }
 		];
-		const crawledEdges = await getInternalLinks(item);
+		const { edges: crawledEdges, backlinks: crawledBacklinks } = await getInternalLinks(item);
 
 		edges = [...edges, ...crawledEdges];
+
+		backlinks = mergeWith(backlinks, crawledBacklinks, customizer);
 	}
 	return {
 		body: {
 			nodes,
-			edges
+			edges,
+			backlinks
 		}
 	};
+}
+
+function customizer(objValue, srcValue) {
+	if (isArray(objValue)) {
+		return objValue.concat(srcValue);
+	}
 }
 
 function getFrontmatter(filePath: string) {
@@ -50,7 +61,7 @@ function getMarkdownFiles(dir: string) {
 }
 
 async function getInternalLinks(filePath: string) {
-	const backlinks: string[] = [];
+	const backlinks: { [key: string]: string[] } = {};
 	let edges: Edge[] = [];
 	const content = fs.readFileSync(filePath, 'utf8');
 	await compile(content, {
@@ -67,6 +78,7 @@ async function getInternalLinks(filePath: string) {
 							return match;
 						});
 						if (result) {
+							backlinks[toSlug(result, dir)] = [toSlug(filePath, 'src/routes')];
 							edges = [
 								...edges,
 								{ source: toSlug(filePath, 'src/routes'), target: toSlug(result, dir) }
@@ -83,5 +95,5 @@ async function getInternalLinks(filePath: string) {
 		]
 	});
 
-	return edges;
+	return { edges, backlinks };
 }
