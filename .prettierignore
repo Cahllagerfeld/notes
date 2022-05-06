@@ -1,4 +1,5 @@
-src/lib/routes/notes/*
+src/routes/notes/
+pnpm-lock.yaml
 
 
 .DS_Store

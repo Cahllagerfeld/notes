@@ -17,6 +17,9 @@ const config = {
 	],
 
 	kit: {
+		prerender: {
+			default: true
+		},
 		files: {
 			lib: 'src/lib'
 		},
