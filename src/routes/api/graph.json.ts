@@ -5,7 +5,7 @@ import { normalizeFileName, parseFileNameFromPath, toSlug } from '$lib/util/wiki
 import matter from 'gray-matter';
 import { compile } from 'mdsvex';
 import { mergeWith, isArray } from 'lodash';
-import type { Node, Edge } from '$lib/contents/types';
+import type { Node, Edge, Backlink } from '$lib/types';
 
 export async function get() {
 	const dir = 'src/routes/notes';
@@ -15,10 +15,10 @@ export async function get() {
 	let backlinks: { [key: string]: string[] } = {};
 	for (const item of items) {
 		const sanitizedItem = toSlug(item, 'src/routes');
-		nodes = [
-			...nodes,
-			{ id: sanitizedItem, title: getFrontmatter(item).data.title, href: sanitizedItem }
-		];
+		const title = getFrontmatter(item).data.title
+			? getFrontmatter(item).data.title
+			: getFilename(item);
+		nodes = [...nodes, { id: sanitizedItem, title, href: sanitizedItem }];
 		const { edges: crawledEdges, backlinks: crawledBacklinks } = await getInternalLinks(item);
 
 		edges = [...edges, ...crawledEdges];
@@ -38,6 +38,10 @@ function customizer(objValue, srcValue) {
 	if (isArray(objValue)) {
 		return objValue.concat(srcValue);
 	}
+}
+
+function getFilename(filePath: string) {
+	return path.basename(filePath, '.md');
 }
 
 function getFrontmatter(filePath: string) {
@@ -61,7 +65,7 @@ function getMarkdownFiles(dir: string) {
 }
 
 async function getInternalLinks(filePath: string) {
-	const backlinks: { [key: string]: string[] } = {};
+	const backlinks: { [key: string]: Backlink[] } = {};
 	let edges: Edge[] = [];
 	const content = fs.readFileSync(filePath, 'utf8');
 	await compile(content, {
@@ -78,7 +82,9 @@ async function getInternalLinks(filePath: string) {
 							return match;
 						});
 						if (result) {
-							backlinks[toSlug(result, dir)] = [toSlug(filePath, 'src/routes')];
+							backlinks[toSlug(result, dir)] = [
+								{ href: toSlug(filePath, 'src/routes'), title: getFilename(filePath) }
+							];
 							edges = [
 								...edges,
 								{ source: toSlug(filePath, 'src/routes'), target: toSlug(result, dir) }

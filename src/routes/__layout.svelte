@@ -5,17 +5,12 @@
 		return {
 			stuff: {
 				graph
-			},
-			props: {
-				graph
 			}
 		};
 	}
 </script>
 
 <script lang="ts">
-	import Graph from '$lib/components/Graph.svelte';
-	export let graph;
 	import '../app.css';
 </script>
 

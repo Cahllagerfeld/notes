@@ -8,3 +8,8 @@ export declare type Edge = {
 	source: string;
 	target: string;
 };
+
+export declare type Backlink = {
+	href: string;
+	title: string;
+};
