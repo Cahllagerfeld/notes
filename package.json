@@ -4,7 +4,8 @@
 	"scripts": {
 		"obsidian": "node scripts/prepare-obsidian.js",
 		"dev": "pnpm obsidian && svelte-kit dev",
-		"build": "pnpm obsidian && svelte-kit build",
+		"prebuild": "node scripts/prepare-obsidian.js",
+		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"prepare": "svelte-kit sync && husky install",
