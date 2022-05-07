@@ -2,7 +2,9 @@
 	"name": "notes",
 	"version": "0.0.1",
 	"scripts": {
+		"predev": "node scripts/prepare-obsidian.js",
 		"dev": "svelte-kit dev",
+		"prebuild": "node scripts/prepare-obsidian.js",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",

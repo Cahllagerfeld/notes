@@ -22,10 +22,15 @@ function copyFilesandRename(src, dest) {
 		const destPath = path.join(dest, item);
 		const stat = fs.lstatSync(srcPath);
 		if (stat.isFile()) {
-			fs.copyFileSync(srcPath, destPath);
+			const fileName = preparePermalink(path.basename(srcPath));
+			fs.copyFileSync(srcPath, path.join(dest, fileName));
 		} else if (stat.isDirectory()) {
-			fs.mkdirSync(destPath);
+			if (!fs.existsSync(destPath)) {
+				fs.mkdirSync(destPath);
+			}
 			copyFilesandRename(srcPath, destPath);
 		}
 	}
 }
+
+copyFilesandRename('obsidian', 'src/routes/notes');
