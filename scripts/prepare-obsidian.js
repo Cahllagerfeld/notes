@@ -16,6 +16,9 @@ function preparePermalink(permalink) {
  * @param {string} dest - path to the destination directory
  */
 function copyFilesandRename(src, dest) {
+	if (!fs.existsSync(dest)) {
+		fs.mkdirSync(dest);
+	}
 	const items = fs.readdirSync(src);
 	for (const item of items) {
 		const srcPath = path.join(src, item);
