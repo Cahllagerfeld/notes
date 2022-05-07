@@ -1,5 +1,6 @@
 src/routes/notes/
 pnpm-lock.yaml
+obsidian
 
 
 .DS_Store
