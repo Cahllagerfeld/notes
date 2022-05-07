@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Languages MOC.md",
+            "file": "Areas/Programming languages.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Languages MOC.md",
+                "file": "Areas/Programming languages.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,10 +88,10 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Areas/Languages MOC.md",
-    "000 index.md",
+    "Areas/Programming languages.md",
+    "Areas/Tools.md",
     "005 Active MOC.md",
-    "Areas/Tools MOC.md",
+    "index.md",
     "Untitled.md"
   ]
 }

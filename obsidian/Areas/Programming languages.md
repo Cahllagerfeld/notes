@@ -1,8 +1,7 @@
 ---
-title: Languages MOC
+title: Programming languages MOC
 tags: [languages, MOC]
 ---
-# Languages MOC
 Welcome to the languages MOC. It is for topics related to programming languages
 
 ## List of Languages
