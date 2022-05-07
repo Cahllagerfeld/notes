@@ -4,7 +4,8 @@ import wikiLink from 'remark-wiki-link';
 import { normalizeFileName, parseFileNameFromPath, toSlug } from '$lib/util/wiki-link.js';
 import matter from 'gray-matter';
 import { compile } from 'mdsvex';
-import { mergeWith, isArray } from 'lodash';
+import mergeWith from 'lodash/mergeWith.js';
+import isArray from 'lodash/isArray.js';
 import type { Node, Edge, Backlink } from '$lib/types';
 
 export async function get() {
