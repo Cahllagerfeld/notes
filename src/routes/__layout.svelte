@@ -15,7 +15,9 @@
 	import '../app.css';
 </script>
 
-<div class="mx-auto md:container">
+<div class="flex min-h-screen flex-col">
 	<Header />
-	<slot />
+	<main class="mx-auto w-full px-0 lg:w-11/12">
+		<slot />
+	</main>
 </div>
