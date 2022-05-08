@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<header class="flex h-16 items-center justify-between">
+<header class="flex h-16 items-center justify-between border-b border-b-gray-400">
 	<div class="text-4xl dark:text-[#FFFFFFDE]"><a href="/">Julian's Page 🌴</a></div>
 	<ul class="space-x-4">
 		{#each navbarItems as item}
