@@ -7,7 +7,7 @@
 <svelte:window bind:scrollY={scroll} />
 <nav
 	class:scrolled-out={scroll > 0}
-	class="fixed mx-auto w-full border-b border-solid border-transparent"
+	class="sticky top-0 mx-auto w-full border-b border-solid border-transparent"
 >
 	<div class="mx-auto flex h-16 items-center justify-between lg:w-11/12">
 		<a class="text-4xl" href="/">Julian's Page 🌴</a>
