@@ -17,7 +17,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<Header />
-	<main class="mx-auto w-full px-0 lg:w-11/12">
+	<main class="mx-auto w-full px-0 lg:container">
 		<slot />
 	</main>
 </div>
