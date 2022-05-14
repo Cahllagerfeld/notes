@@ -1,4 +1,5 @@
-src/routes/notes/
+src/routes/notes/**/*.*
+!src/routes/notes/__layout.svelte
 pnpm-lock.yaml
 obsidian
 
