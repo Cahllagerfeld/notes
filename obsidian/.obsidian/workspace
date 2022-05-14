@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Languages MOC.md",
+            "file": "Areas/Cloudinary.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Languages MOC.md",
+                "file": "Areas/Cloudinary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,10 +88,13 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Areas/Languages MOC.md",
-    "000 index.md",
+    "Areas/Cloudinary.md",
+    "Resources/web/Cloudinary-Svelte-Society-Stream.md",
+    "Areas/Tools.md",
+    "index.md",
+    "Areas/Programming languages.md",
     "005 Active MOC.md",
-    "Areas/Tools MOC.md",
+    "000 index.md",
     "Untitled.md"
   ]
 }

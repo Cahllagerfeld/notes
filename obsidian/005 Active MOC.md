@@ -1,5 +1,5 @@
 ---
-title: Active Notes MOC
+title: Active Notes
 tags: [MOC]
 ---
-[[Tools MOC|Tools]]
+[[Tools|Tools]]
