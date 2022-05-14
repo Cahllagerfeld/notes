@@ -11,9 +11,13 @@
 </script>
 
 <script lang="ts">
+	import Header from '../lib/components/layout/Header.svelte';
 	import '../app.css';
 </script>
 
-<div class="mx-auto md:container">
-	<slot />
+<div class="flex min-h-screen flex-col">
+	<Header />
+	<main class="mx-auto w-full px-0 lg:container">
+		<slot />
+	</main>
 </div>
