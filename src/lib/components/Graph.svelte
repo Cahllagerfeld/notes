@@ -27,8 +27,10 @@
 	export let graph;
 
 	let svg;
-	let width = 500;
-	let height = 600;
+	export let width = 500;
+	export let height = 600;
+	let className = '';
+	export { className as class };
 	const nodeRadius = 5;
 
 	$: links = graph.edges.map((d) => Object.create(d));
@@ -116,7 +118,7 @@
 <svelte:window on:resize={resize} />
 
 <!-- SVG was here -->
-<svg bind:this={svg} {width} {height}>
+<svg class={className} bind:this={svg} {width} {height}>
 	{#each links as link}
 		<g stroke="#999" stroke-opacity="0.6">
 			<line

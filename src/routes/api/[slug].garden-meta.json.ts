@@ -17,7 +17,7 @@ export const get: RequestHandler = async ({ params }) => {
 	let edges: Edge[] = [];
 	let backlinks: { [key: string]: string[] } = {};
 	for (const item of items) {
-		const sanitizedItem = toSlug(item, 'src/routes');
+		const sanitizedItem = removeSlashatEnd(toSlug(item, 'src/routes'));
 		const title = getFrontmatter(item).data.title
 			? getFrontmatter(item).data.title
 			: getFilename(item);
@@ -29,10 +29,11 @@ export const get: RequestHandler = async ({ params }) => {
 		backlinks = mergeWith(backlinks, crawledBacklinks, customizer);
 	}
 	const filteredBacklinkgs = backlinks[resolvedPath];
+	const { edges: filteredEdges, nodes: filteredNodes } = filterGraph(resolvedPath, edges, nodes);
 	return {
 		body: {
-			nodes,
-			edges,
+			nodes: filteredNodes,
+			edges: filteredEdges,
 			backlinks: filteredBacklinkgs
 		}
 	};
@@ -72,6 +73,21 @@ function getMarkdownFiles(dir: string) {
 	return results.filter((f) => f.endsWith('.md'));
 }
 
+function filterGraph(path: string, edges: Edge[], nodes: Node[]) {
+	const filteredEdges = edges.filter((edge) => {
+		return edge.source === path || edge.target === path;
+	});
+	const filteredNodes = nodes.filter((node) => {
+		return filteredEdges.some((edge) => {
+			return edge.source === node.id || edge.target === node.id;
+		});
+	});
+	return {
+		edges: filteredEdges,
+		nodes: filteredNodes
+	};
+}
+
 async function getInternalLinks(filePath: string) {
 	const backlinks: { [key: string]: Backlink[] } = {};
 	let edges: Edge[] = [];
@@ -90,14 +106,15 @@ async function getInternalLinks(filePath: string) {
 							return match;
 						});
 						if (result) {
-							backlinks[
-								toSlug(result, dir).endsWith('/')
-									? toSlug(result, dir).substring(0, toSlug(result, dir).length - 1)
-									: toSlug(result, dir)
-							] = [{ href: toSlug(filePath, 'src/routes'), title: getFilename(filePath) }];
+							backlinks[removeSlashatEnd(toSlug(result, dir))] = [
+								{ href: toSlug(filePath, 'src/routes'), title: getFilename(filePath) }
+							];
 							edges = [
 								...edges,
-								{ source: toSlug(filePath, 'src/routes'), target: toSlug(result, dir) }
+								{
+									source: removeSlashatEnd(toSlug(filePath, 'src/routes')),
+									target: removeSlashatEnd(toSlug(result, dir))
+								}
 							];
 						}
 						return result !== undefined && result.length > 0 ? [toSlug(result, dir)] : ['/'];
@@ -112,4 +129,8 @@ async function getInternalLinks(filePath: string) {
 	});
 
 	return { edges, backlinks };
+}
+
+function removeSlashatEnd(str: string) {
+	return str.endsWith('/') ? str.substring(0, str.length - 1) : str;
 }
