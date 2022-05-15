@@ -1,16 +1,20 @@
 <script context="module">
-	export async function load({ stuff, url }) {
+	export const load = async ({ url, fetch }) => {
+		const encodedPath = url.pathname.replace(/\//g, '__');
+		const graphData = await fetch(`/api/${encodedPath}.garden-meta.json`);
+		const graph = await graphData.json();
+
 		return {
 			props: {
-				backlinks: stuff.graph.backlinks[url.pathname]
+				backlinks: graph.backlinks
 			}
 		};
-	}
+	};
 </script>
 
 <script lang="ts">
 	import type { Backlink as BacklinkType } from '$lib/types';
-	import Backlink from '$lib/components/notes/backlinks/backlinks.svelte';
+	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
 
 	export let backlinks: BacklinkType[];
 </script>
@@ -19,6 +23,6 @@
 	<slot />
 	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-lightgray" />
 	<div class="flex w-1/2">
-		<Backlink {backlinks} />
+		<Backlinks {backlinks} />
 	</div>
 </div>

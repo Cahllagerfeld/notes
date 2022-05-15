@@ -7,8 +7,10 @@ import { compile } from 'mdsvex';
 import mergeWith from 'lodash/mergeWith.js';
 import isArray from 'lodash/isArray.js';
 import type { Node, Edge, Backlink } from '$lib/types';
+import type { RequestHandler } from '@sveltejs/kit';
 
-export async function get() {
+export const get: RequestHandler = async ({ params }) => {
+	const resolvedPath = resolveFilePath(params.slug);
 	const dir = 'src/routes/notes';
 	const items = getMarkdownFiles(path.join(dir));
 	let nodes: Node[] = [];
@@ -26,13 +28,18 @@ export async function get() {
 
 		backlinks = mergeWith(backlinks, crawledBacklinks, customizer);
 	}
+	const filteredBacklinkgs = backlinks[resolvedPath];
 	return {
 		body: {
 			nodes,
 			edges,
-			backlinks
+			backlinks: filteredBacklinkgs
 		}
 	};
+};
+
+function resolveFilePath(encodedPath: string) {
+	return encodedPath.replace(/__/g, '/');
 }
 
 function customizer(objValue, srcValue) {
