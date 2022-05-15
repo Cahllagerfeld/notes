@@ -7,15 +7,17 @@ import { compile } from 'mdsvex';
 import mergeWith from 'lodash/mergeWith.js';
 import isArray from 'lodash/isArray.js';
 import type { Node, Edge, Backlink } from '$lib/types';
+import type { RequestHandler } from '@sveltejs/kit';
 
-export async function get() {
+export const get: RequestHandler = async ({ params }) => {
+	const resolvedPath = resolveFilePath(params.slug);
 	const dir = 'src/routes/notes';
 	const items = getMarkdownFiles(path.join(dir));
 	let nodes: Node[] = [];
 	let edges: Edge[] = [];
 	let backlinks: { [key: string]: string[] } = {};
 	for (const item of items) {
-		const sanitizedItem = toSlug(item, 'src/routes');
+		const sanitizedItem = removeSlashatEnd(toSlug(item, 'src/routes'));
 		const title = getFrontmatter(item).data.title
 			? getFrontmatter(item).data.title
 			: getFilename(item);
@@ -26,13 +28,19 @@ export async function get() {
 
 		backlinks = mergeWith(backlinks, crawledBacklinks, customizer);
 	}
+	const filteredBacklinkgs = backlinks[resolvedPath];
+	const { edges: filteredEdges, nodes: filteredNodes } = filterGraph(resolvedPath, edges, nodes);
 	return {
 		body: {
-			nodes,
-			edges,
-			backlinks
+			nodes: filteredNodes,
+			edges: filteredEdges,
+			backlinks: filteredBacklinkgs
 		}
 	};
+};
+
+function resolveFilePath(encodedPath: string) {
+	return encodedPath.replace(/__/g, '/');
 }
 
 function customizer(objValue, srcValue) {
@@ -65,6 +73,21 @@ function getMarkdownFiles(dir: string) {
 	return results.filter((f) => f.endsWith('.md'));
 }
 
+function filterGraph(path: string, edges: Edge[], nodes: Node[]) {
+	const filteredEdges = edges.filter((edge) => {
+		return edge.source === path || edge.target === path;
+	});
+	const filteredNodes = nodes.filter((node) => {
+		return filteredEdges.some((edge) => {
+			return edge.source === node.id || edge.target === node.id;
+		});
+	});
+	return {
+		edges: filteredEdges,
+		nodes: filteredNodes
+	};
+}
+
 async function getInternalLinks(filePath: string) {
 	const backlinks: { [key: string]: Backlink[] } = {};
 	let edges: Edge[] = [];
@@ -83,12 +106,15 @@ async function getInternalLinks(filePath: string) {
 							return match;
 						});
 						if (result) {
-							backlinks[toSlug(result, dir)] = [
+							backlinks[removeSlashatEnd(toSlug(result, dir))] = [
 								{ href: toSlug(filePath, 'src/routes'), title: getFilename(filePath) }
 							];
 							edges = [
 								...edges,
-								{ source: toSlug(filePath, 'src/routes'), target: toSlug(result, dir) }
+								{
+									source: removeSlashatEnd(toSlug(filePath, 'src/routes')),
+									target: removeSlashatEnd(toSlug(result, dir))
+								}
 							];
 						}
 						return result !== undefined && result.length > 0 ? [toSlug(result, dir)] : ['/'];
@@ -103,4 +129,8 @@ async function getInternalLinks(filePath: string) {
 	});
 
 	return { edges, backlinks };
+}
+
+function removeSlashatEnd(str: string) {
+	return str.endsWith('/') ? str.substring(0, str.length - 1) : str;
 }
