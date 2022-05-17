@@ -6,3 +6,6 @@ Welcome to the Tools MOC. This Map of Contents is the home for different tools, 
 
 Multimedia
 - [[Cloudinary]]
+
+Hosting
+-[[Vercel]]

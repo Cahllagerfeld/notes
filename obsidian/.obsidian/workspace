@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Cloudinary.md",
+            "file": "Areas/Vercel.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Cloudinary.md",
+                "file": "Areas/Vercel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,11 +88,12 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
+    "Areas/Vercel.md",
+    "Areas/Tools.md",
     "Areas/Cloudinary.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
-    "Areas/Tools.md",
-    "index.md",
     "Areas/Programming languages.md",
+    "index.md",
     "005 Active MOC.md",
     "000 index.md",
     "Untitled.md"
