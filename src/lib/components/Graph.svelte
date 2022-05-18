@@ -27,7 +27,7 @@
 	export let graph;
 
 	let svg;
-	export let width = 500;
+	export let width;
 	export let height = 600;
 	let className = '';
 	export { className as class };

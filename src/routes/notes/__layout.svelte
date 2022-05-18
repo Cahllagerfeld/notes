@@ -20,6 +20,7 @@
 
 	export let backlinks: BacklinkType[];
 	export let graph: { edges: Edge[]; nodes: Node[] };
+	let graphWidth: number;
 </script>
 
 <div class="">
@@ -32,8 +33,15 @@
 		<div class="w-1/2 ">
 			<h2>Graph</h2>
 
-			{#key graph}
-				<Graph height={400} class="rounded-lg border border-gray-400" {graph} />
+			{#key [graph, graphWidth]}
+				<div bind:offsetWidth={graphWidth}>
+					<Graph
+						height={400}
+						width={graphWidth}
+						class="w-full rounded-lg border border-gray-400"
+						{graph}
+					/>
+				</div>
 			{/key}
 		</div>
 	</div>
