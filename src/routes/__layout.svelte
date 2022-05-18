@@ -3,7 +3,7 @@
 	import '../app.css';
 </script>
 
-<div class="flex min-h-screen flex-col">
+<div class="mx-4 flex min-h-screen flex-col md:mx-0">
 	<Header />
 	<main class="mx-auto w-full px-0 lg:container">
 		<slot />
