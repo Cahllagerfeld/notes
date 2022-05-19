@@ -107,7 +107,7 @@ async function getInternalLinks(filePath: string) {
 						});
 						if (result) {
 							backlinks[removeSlashatEnd(toSlug(result, dir))] = [
-								{ href: toSlug(filePath, 'src/routes'), title: getFilename(filePath) }
+								{ href: toSlug(filePath, 'src/routes'), title: getFrontmatter(filePath).data.title }
 							];
 							edges = [
 								...edges,
