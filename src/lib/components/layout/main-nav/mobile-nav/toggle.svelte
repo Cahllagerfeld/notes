@@ -1,8 +1,15 @@
 <script lang="ts">
 	import showMobileMenuStore from '$lib/stores/mobile-menu';
+	import { showHideOverflowY } from '$lib/util/helpers';
 
 	function handleToggle() {
 		$showMobileMenuStore = !$showMobileMenuStore;
+
+		if ($showMobileMenuStore) {
+			showHideOverflowY(true);
+		} else {
+			showHideOverflowY(false);
+		}
 	}
 </script>
 
