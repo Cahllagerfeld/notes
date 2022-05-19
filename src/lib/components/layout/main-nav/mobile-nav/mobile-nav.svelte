@@ -3,11 +3,23 @@
 	import showMobileMenu from '$lib/stores/mobile-menu';
 	import { showHideOverflowY } from '$lib/util/helpers';
 	import { navigating } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	$: if ($navigating) {
 		$showMobileMenu = false;
 		showHideOverflowY(false);
 	}
+
+	onMount(() => {
+		const handleTabletChange = (e: any) => {
+			if (e.matches) {
+				$showMobileMenu = false;
+				showHideOverflowY(false);
+			}
+		};
+		let query = window.matchMedia('(min-width: 768px)');
+		query.addEventListener('change', handleTabletChange);
+	});
 </script>
 
 {#if $showMobileMenu}
