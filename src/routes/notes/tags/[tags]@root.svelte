@@ -6,3 +6,5 @@
 	export let success: boolean;
 	console.log(success);
 </script>
+
+<h1>Thats my Tag Page</h1>
