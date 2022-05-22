@@ -1,9 +1,8 @@
-<script context="module">
-	export const layout = false;
-</script>
-
 <script lang="ts">
-	export let items: { href: string; title: string }[];
+	import TagList from '$lib/components/tags/tag-list.svelte';
+	import type { TagItem } from '$lib/types';
+	export let items: TagItem[];
 </script>
 
-<h1>{JSON.stringify(items)}</h1>
+<h1 class="text-3xl">Tags</h1>
+<TagList {items} />

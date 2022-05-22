@@ -17,7 +17,7 @@ export const get: RequestHandler = async ({ params }) => {
 			});
 		})
 		.map((item) => {
-			return { href: toSlug(item, dir), title: getFrontmatter(item).data.title };
+			return { href: toSlug(item, 'src/routes'), title: getFrontmatter(item).data.title };
 		});
 	return {
 		status: 200,
