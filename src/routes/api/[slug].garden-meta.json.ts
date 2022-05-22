@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import wikiLink from 'remark-wiki-link';
 import { normalizeFileName, parseFileNameFromPath, toSlug } from '$lib/util/wiki-link.js';
-import matter from 'gray-matter';
+import { getFrontmatter, getMarkdownFiles } from '$lib/util/markdown';
 import { compile } from 'mdsvex';
 import mergeWith from 'lodash/mergeWith.js';
 import isArray from 'lodash/isArray.js';
@@ -51,26 +51,6 @@ function customizer(objValue, srcValue) {
 
 function getFilename(filePath: string) {
 	return path.basename(filePath, '.md');
-}
-
-function getFrontmatter(filePath: string) {
-	const content = fs.readFileSync(filePath, 'utf8');
-	return matter(content);
-}
-
-function getMarkdownFiles(dir: string) {
-	let results: string[] = [];
-	const items = fs.readdirSync(dir);
-	items.forEach((note) => {
-		note = `${dir}/${note}`;
-		const stat = fs.statSync(note);
-		if (stat && stat.isDirectory()) {
-			results = results.concat(getMarkdownFiles(note));
-		} else {
-			results.push(note);
-		}
-	});
-	return results.filter((f) => f.endsWith('.md'));
 }
 
 function filterGraph(path: string, edges: Edge[], nodes: Node[]) {

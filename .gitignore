@@ -6,5 +6,5 @@ node_modules
 .env
 .env.*
 !.env.example
-src/routes/notes/**/*.*
-!src/routes/notes/__layout.svelte
+src/routes/notes/.obsidian/
+src/routes/notes/**/*.md

@@ -13,3 +13,8 @@ export declare type Backlink = {
 	href: string;
 	title: string;
 };
+
+export declare type TagItem = {
+	href: string;
+	title: string;
+};
