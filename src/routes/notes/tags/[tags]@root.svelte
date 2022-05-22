@@ -3,8 +3,7 @@
 </script>
 
 <script lang="ts">
-	export let success: boolean;
-	console.log(success);
+	export let items: { href: string; title: string }[];
 </script>
 
-<h1>Thats my Tag Page</h1>
+<h1>{JSON.stringify(items)}</h1>
