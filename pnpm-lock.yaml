@@ -18,6 +18,7 @@ specifiers:
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^3.2.1
+  fuse.js: ^6.6.2
   gray-matter: ^4.0.3
   husky: ^7.0.4
   lint-staged: ^12.4.1
@@ -38,11 +39,12 @@ specifiers:
   unist-util-visit: ^4.1.0
 
 dependencies:
+  fuse.js: 6.6.2
   gray-matter: 4.0.3
 
 devDependencies:
   '@playwright/test': 1.21.1
-  '@sveltejs/adapter-auto': 1.0.0-next.42
+  '@sveltejs/adapter-auto': 1.0.0-next.44
   '@sveltejs/kit': 1.0.0-next.324_svelte@3.48.0
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
   '@types/lodash': 4.14.182
@@ -743,12 +745,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.42:
-    resolution: {integrity: sha512-AMTrR0A2Uss1FQkpYDV/7lYgQtRHyTrvwGCrll1lwZNPexb9MZGU4+x8csGKTNgf29Dg3lCEc9JBQti89rHZbw==}
+  /@sveltejs/adapter-auto/1.0.0-next.44:
+    resolution: {integrity: sha512-uTZDLMImGKRZRh2r5mRwmCvKyzldTGxTa9Ec12yxhaYGSvpg/TlCiwGAnX9ZemzTJtSZUU8dW3tJLrN0YPw3bg==}
     dependencies:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.19
-      '@sveltejs/adapter-netlify': 1.0.0-next.57
-      '@sveltejs/adapter-vercel': 1.0.0-next.51
+      '@sveltejs/adapter-netlify': 1.0.0-next.58
+      '@sveltejs/adapter-vercel': 1.0.0-next.53
     dev: true
 
   /@sveltejs/adapter-cloudflare/1.0.0-next.19:
@@ -758,16 +760,16 @@ packages:
       worktop: 0.8.0-next.13
     dev: true
 
-  /@sveltejs/adapter-netlify/1.0.0-next.57:
-    resolution: {integrity: sha512-rqvOr488+7NGkEHw/D6v1Y8Fg0MbiUP/YI1uSYjKy+tA8/4FOdBgU8Nk8daPTxWEU+CpsgzvA4X8IVonuML9SA==}
+  /@sveltejs/adapter-netlify/1.0.0-next.58:
+    resolution: {integrity: sha512-ZkL9mop/oTLfSj3tPCnTjQw7cKfoYLiptDzTypv7l+HDfE7SCFzJuK7YenjTMPoKTakFVfYAEEVIdJEySZt5MQ==}
     dependencies:
       '@iarna/toml': 2.2.5
       esbuild: 0.14.38
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.51:
-    resolution: {integrity: sha512-U4GSe1tYcWq90XCQfLK4qmEEVA1MyWgnT6i7LhbLVOoNP8bf3ict3xKjGrHcx/CY4jNUBA80DXSkj/hpFkweAg==}
+  /@sveltejs/adapter-vercel/1.0.0-next.53:
+    resolution: {integrity: sha512-MmeQxvUYP9UeNuVPd50ZeskzvIqIasyo1Ooa0SUPqoQ41IH+dnkT0+oGJplpX7Ii3gmTbJgleYkV6X6huWQESg==}
     dependencies:
       esbuild: 0.14.38
     dev: true
@@ -2125,6 +2127,11 @@ packages:
   /functional-red-black-tree/1.0.1:
     resolution: {integrity: sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=}
     dev: true
+
+  /fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
+    dev: false
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
