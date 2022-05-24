@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
+const ignoreList = ['obsidian/templates', 'obsidian/.obsidian'];
+
 /**
  *
  * @param {string} permalink
@@ -22,6 +24,9 @@ function copyFilesandRename(src, dest) {
 	const items = fs.readdirSync(src);
 	for (const item of items) {
 		const srcPath = path.join(src, item);
+		if (ignoreList.some((ignorePath) => srcPath.includes(ignorePath))) {
+			continue;
+		}
 		const destPath = path.join(dest, item);
 		const stat = fs.lstatSync(srcPath);
 		if (stat.isFile()) {

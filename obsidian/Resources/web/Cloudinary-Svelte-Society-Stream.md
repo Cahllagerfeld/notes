@@ -1,7 +1,7 @@
 ---
 title: Svelte-Society Stream about Cloudinary
 tags: [livestream, svelte]
-created: 12-05-2022
+created: 14-05-2022
 ---
 
 ## References

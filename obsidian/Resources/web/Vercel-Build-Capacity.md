@@ -1,7 +1,7 @@
 ---
 title: Vercel Limits
 tags: [vercel, hosting, frontend, serverless]
-created: 12-05-2022
+created: 14-05-2022
 ---
 
 There are several Limits Vercel provides, when hosting the Application there. See the Limits in the first link of the Reference Section.
