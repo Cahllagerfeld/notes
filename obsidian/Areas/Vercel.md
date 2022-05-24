@@ -6,3 +6,4 @@ Vercel is a serverless platform for hosting frontend-applications. It can be add
 
 ## References
 [[Vercel-getting-started]]  
+[[Verce-Build-Capacity]]
