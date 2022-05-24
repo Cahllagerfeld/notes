@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Resources/web/Verce-Build-Capacity.md",
+            "file": "Areas/Preview Environment.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/web/Verce-Build-Capacity.md",
+                "file": "Areas/Preview Environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Resources/web/Verce-Build-Capacity.md",
+    "Areas/Preview Environment.md",
+    "Areas/Tools.md",
     "Areas/Vercel.md",
     "Resources/web/Vercel-getting-started.md",
+    "Resources/web/Vercel-Build-Capacity.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
-    "Areas/Tools.md",
-    "Areas/Cloudinary.md",
-    "Areas/Programming languages.md",
-    "index.md",
+    "templates/note-template.md",
     "005 Active MOC.md",
-    "000 index.md"
+    "index.md",
+    "Areas/Programming languages.md"
   ]
 }
