@@ -1,11 +1,25 @@
 <script lang="ts">
 	let searchTerm = '';
 	let active = false;
+	let data: unknown = [];
+
+	const handleInput = async () => {
+		const params = new URLSearchParams({
+			q: searchTerm
+		});
+		const url = `/api/search?${params.toString()}`;
+		const res = await fetch(url);
+		if (res.ok) {
+			const resData = await res.json();
+			data = resData;
+		}
+	};
 </script>
 
 <div class="flex">
 	{#if active}
 		<input
+			on:input={handleInput}
 			bind:value={searchTerm}
 			placeholder="Search"
 			class="block rounded-xl border border-lightgray px-2 py-1 transition-all duration-200"
