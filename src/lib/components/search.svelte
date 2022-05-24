@@ -2,6 +2,7 @@
 	let searchTerm = '';
 	let active = false;
 	let data: unknown = [];
+	$: console.log(data);
 
 	const handleInput = async () => {
 		const params = new URLSearchParams({
