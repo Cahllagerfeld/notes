@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Preview Environment.md",
+            "file": "Areas/Languages and Frameworks.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Preview Environment.md",
+                "file": "Areas/Languages and Frameworks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
+    "Areas/Languages and Frameworks.md",
     "Areas/Preview Environment.md",
+    "index.md",
     "Areas/Tools.md",
     "Areas/Vercel.md",
     "Resources/web/Vercel-getting-started.md",
     "Resources/web/Vercel-Build-Capacity.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
     "templates/note-template.md",
-    "005 Active MOC.md",
-    "index.md",
-    "Areas/Programming languages.md"
+    "005 Active MOC.md"
   ]
 }
