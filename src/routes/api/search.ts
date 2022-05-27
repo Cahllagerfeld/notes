@@ -9,16 +9,17 @@ import { toSlug } from '../../lib/util/wiki-link.js';
 
 export const get: RequestHandler = async ({ url }) => {
 	const param = url.searchParams.get('q') || '';
-	const dir = 'src/routes';
-	const items = getMarkdownFiles(path.join(dir));
+	const items = Object.entries(import.meta.globEager('/src/routes/**/*.md', { as: 'raw' }));
+	console.log(items);
 	const parsedItems = await Promise.all(
-		items.map(async (item) => {
-			const content = fs.readFileSync(item, 'utf8');
-			const compiled = await compile(content, mdsvexConfig);
+		items.map(async ([key, value]) => {
+			console.log({ key });
+			console.log({ value });
+			const compiled = await compile(value, mdsvexConfig);
 			compiled!.code = compiled!.code
 				.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
 				.replace(/<\/?[^>]+(>|$)/g, '');
-			const withLink = { ...compiled, href: toSlug(item, 'src/routes') };
+			const withLink = { ...compiled, href: toSlug(key, '/src/routes') };
 			return withLink;
 		})
 	);
