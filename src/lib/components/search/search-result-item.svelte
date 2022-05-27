@@ -6,6 +6,8 @@
 	console.log(item);
 </script>
 
-<div class="">
-	<a sveltekit:prefetch href={item.href}>{item.data.fm.title}</a>
-</div>
+{#if item.data}
+	<div>
+		<a sveltekit:prefetch href={item.href}>{item.data.fm.title}</a>
+	</div>
+{/if}

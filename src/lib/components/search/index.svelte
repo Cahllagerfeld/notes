@@ -1,6 +1,5 @@
 <script lang="ts">
 	import SearchItemResult from '$lib/components/search/search-result-item.svelte';
-	import type { SearchItem } from '../../types';
 	let searchTerm = '';
 	let active = false;
 	let data: any[] = [];

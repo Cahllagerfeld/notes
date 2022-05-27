@@ -21,7 +21,7 @@ export declare type TagItem = {
 
 export declare type SearchItem = {
 	code: string;
-	data?: Record<string, unknown> | undefined;
+	data?: Record<string, any>;
 	map?: string | undefined;
 	href: string;
 };
