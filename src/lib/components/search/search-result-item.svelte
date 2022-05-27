@@ -2,8 +2,6 @@
 	import type { SearchItem } from '$lib/types';
 
 	export let item: SearchItem;
-
-	console.log(item);
 </script>
 
 {#if item.data}

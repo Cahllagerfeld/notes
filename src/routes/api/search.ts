@@ -1,8 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import path from 'path';
-import { getMarkdownFiles } from '$lib/util/markdown';
 import { compile } from 'mdsvex';
-import fs from 'fs';
 import mdsvexConfig from '../../../mdsvex.config.js';
 import Fuse from 'fuse.js';
 import { toSlug } from '../../lib/util/wiki-link.js';
@@ -10,11 +7,8 @@ import { toSlug } from '../../lib/util/wiki-link.js';
 export const get: RequestHandler = async ({ url }) => {
 	const param = url.searchParams.get('q') || '';
 	const items = Object.entries(import.meta.globEager('/src/routes/**/*.md', { as: 'raw' }));
-	console.log(items);
 	const parsedItems = await Promise.all(
 		items.map(async ([key, value]) => {
-			console.log({ key });
-			console.log({ value });
 			const compiled = await compile(value, mdsvexConfig);
 			compiled!.code = compiled!.code
 				.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')

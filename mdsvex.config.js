@@ -12,7 +12,7 @@ import {
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 	layout: {
-		notes: './src/lib/components/notes/layout.svelte'
+		notes: 'src/lib/components/notes/layout.svelte'
 	},
 	smartypants: {
 		dashes: 'oldschool'
