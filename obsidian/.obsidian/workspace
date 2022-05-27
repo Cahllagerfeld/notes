@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Resources/web/Tailwind-Dark-Theme.md",
+            "file": "Areas/Tailwind.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/web/Tailwind-Dark-Theme.md",
+                "file": "Areas/Tailwind.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,13 +88,13 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
+    "Areas/Tailwind.md",
+    "Areas/Preview Environment.md",
+    "Areas/Languages and Frameworks.md",
     "Resources/web/Tailwind-Dark-Theme.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
-    "Areas/Tailwind.md",
-    "Areas/Languages and Frameworks.md",
     "Areas/Tools.md",
     "Areas/Cloudinary.md",
-    "Areas/Preview Environment.md",
     "index.md",
     "Areas/Vercel.md",
     "Resources/web/Vercel-getting-started.md"
