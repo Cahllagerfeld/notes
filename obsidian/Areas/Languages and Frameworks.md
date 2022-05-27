@@ -11,3 +11,6 @@ Welcome to the languages MOC. It is for topics related to programming languages
 
 ## List of Frameworks
 [[Sveltekit]]
+
+## List of Libraries
+[[Tailwind]]
