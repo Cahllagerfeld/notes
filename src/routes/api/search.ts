@@ -4,6 +4,8 @@ import mdsvexConfig from '../../../mdsvex.config.js';
 import Fuse from 'fuse.js';
 import { toSlug } from '../../lib/util/wiki-link.js';
 
+delete mdsvexConfig.layout;
+
 export const get: RequestHandler = async ({ url }) => {
 	const param = url.searchParams.get('q') || '';
 	const items = Object.entries(import.meta.globEager('/src/routes/**/*.md', { as: 'raw' }));
