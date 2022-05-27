@@ -20,7 +20,7 @@
 
 <style lang="postcss">
 	.scrolled-out {
-		@apply border-gray-400;
+		@apply border-lightgray;
 		background: hsl(0 5% 96% / 85%);
 		backdrop-filter: saturate(0.5) blur(5px);
 	}

@@ -38,7 +38,7 @@
 					<Graph
 						height={400}
 						width={graphWidth}
-						class="w-full rounded-lg border border-gray-400"
+						class="w-full rounded-lg border border-lightgray"
 						{graph}
 					/>
 				</div>

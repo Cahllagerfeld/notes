@@ -4,10 +4,10 @@ const config = {
 	theme: {
 		extend: {
 			colors: {
-				black: '#181717',
-				offwhite: '#d4d4d4',
+				black: '#1d1d1d',
+				offwhite: '#ececec',
 				darkred: '#8d0000',
-				lightgray: '#656464',
+				lightgray: '#bfbfbf',
 				darkgray: '#2b2a2a'
 			}
 		}
