@@ -18,3 +18,10 @@ export declare type TagItem = {
 	href: string;
 	title: string;
 };
+
+export declare type SearchItem = {
+	code: string;
+	data?: Record<string, unknown> | undefined;
+	map?: string | undefined;
+	href: string;
+};

@@ -1,8 +1,9 @@
 <script lang="ts">
+	import SearchItemResult from '$lib/components/search/search-result-item.svelte';
+	import type { SearchItem } from '../../types';
 	let searchTerm = '';
 	let active = false;
-	let data: unknown = [];
-	$: console.log(data);
+	let data: any[] = [];
 
 	const handleInput = async () => {
 		const params = new URLSearchParams({
@@ -12,7 +13,7 @@
 		const res = await fetch(url);
 		if (res.ok) {
 			const resData = await res.json();
-			data = resData;
+			data = resData.result;
 		}
 	};
 </script>
@@ -30,4 +31,11 @@
 	<button on:click={() => (active = !active)}>
 		<img width="24" height="24" src="/svg/navigation/search.svg" alt="search" /></button
 	>
+	{#if data.length > 0}
+		<div class="absolute top-full rounded-lg border border-gray-400 bg-[#f9f9f9] p-4 shadow-lg">
+			{#each data as item}
+				<SearchItemResult item={item.item} />
+			{/each}
+		</div>
+	{/if}
 </div>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let label: string;
-	console.log(label);
 </script>
 
 <div class="inline-block rounded-lg border border-gray-400 px-2">

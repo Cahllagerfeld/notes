@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Navigation from '$lib/components/layout/main-nav/index.svelte';
 	import MobileMenu from '$lib/components/layout/main-nav/mobile-nav/mobile-nav.svelte';
-	import Search from '$lib/components/search.svelte';
+	import Search from '$lib/components/search/index.svelte';
 	let scroll: number;
 </script>
 

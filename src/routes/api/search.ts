@@ -5,6 +5,7 @@ import { compile } from 'mdsvex';
 import fs from 'fs';
 import mdsvexConfig from '../../../mdsvex.config.js';
 import Fuse from 'fuse.js';
+import { toSlug } from '../../lib/util/wiki-link.js';
 
 export const get: RequestHandler = async ({ url }) => {
 	const param = url.searchParams.get('q') || '';
@@ -17,7 +18,8 @@ export const get: RequestHandler = async ({ url }) => {
 			compiled!.code = compiled!.code
 				.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
 				.replace(/<\/?[^>]+(>|$)/g, '');
-			return compiled;
+			const withLink = { ...compiled, href: toSlug(item, 'src/routes') };
+			return withLink;
 		})
 	);
 	const fuse = new Fuse(parsedItems, {
