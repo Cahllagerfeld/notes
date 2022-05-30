@@ -10,7 +10,7 @@ Welcome to the languages MOC. It is for topics related to programming languages
 [[Node.js]] - asynchronous event-driven JavaScript runtime  
 
 ## List of Frameworks
-[[Sveltekit]]
+[[Sveltekit]] - Application Framework for Svelte
 
 ## List of Libraries
-[[Tailwind]]
+[[Tailwind]] - utility-first CSS framework
