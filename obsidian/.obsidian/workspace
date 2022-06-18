@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Languages and Frameworks.md",
+            "file": "Areas/Gitpod.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Languages and Frameworks.md",
+                "file": "Areas/Gitpod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Areas/Languages and Frameworks.md",
-    "Areas/Tools.md",
-    "Areas/Tailwind.md",
+    "Areas/Gitpod.md",
+    "Areas/Vercel.md",
     "Areas/Preview Environment.md",
+    "Areas/Languages and Frameworks.md",
+    "Areas/Tailwind.md",
+    "Areas/Tools.md",
     "Resources/web/Tailwind-Dark-Theme.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
     "Areas/Cloudinary.md",
-    "index.md",
-    "Areas/Vercel.md",
-    "Resources/web/Vercel-getting-started.md"
+    "index.md"
   ]
 }
