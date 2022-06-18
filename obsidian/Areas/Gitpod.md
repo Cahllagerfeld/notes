@@ -10,6 +10,9 @@ The product itself is build in the open, and uses mainly [[Typescript]] and [[Go
 
 Headquarter of the company is the Silicon Valley, with the German subsidiary in Kiel.
 
+> **Fun Fact**  
+> This project is created and solely developed within Gitpod
+
 - [[Configure Gitpod]]
 
 ## References

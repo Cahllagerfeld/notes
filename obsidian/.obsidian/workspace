@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Resources/web/Configure Gitpod.md",
+            "file": "Areas/Golang.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/web/Configure Gitpod.md",
+                "file": "Areas/Golang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +88,9 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Resources/web/Configure Gitpod.md",
     "Areas/Golang.md",
     "Areas/Gitpod.md",
+    "Resources/web/Configure Gitpod.md",
     "Areas/Cloudinary.md",
     "Areas/Vercel.md",
     "Areas/Preview Environment.md",
