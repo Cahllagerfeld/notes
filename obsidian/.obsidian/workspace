@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Gitpod.md",
+            "file": "Resources/web/Configure Gitpod.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Gitpod.md",
+                "file": "Resources/web/Configure Gitpod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
+    "Resources/web/Configure Gitpod.md",
+    "Areas/Golang.md",
     "Areas/Gitpod.md",
+    "Areas/Cloudinary.md",
     "Areas/Vercel.md",
     "Areas/Preview Environment.md",
     "Areas/Languages and Frameworks.md",
     "Areas/Tailwind.md",
     "Areas/Tools.md",
-    "Resources/web/Tailwind-Dark-Theme.md",
-    "Resources/web/Cloudinary-Svelte-Society-Stream.md",
-    "Areas/Cloudinary.md",
-    "index.md"
+    "Resources/web/Tailwind-Dark-Theme.md"
   ]
 }
