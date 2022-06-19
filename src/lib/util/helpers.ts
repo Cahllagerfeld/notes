@@ -6,3 +6,8 @@ export const showHideOverflowY = (bool: boolean) => {
 		html.classList.remove('overflow-y-hidden');
 	}
 };
+
+export const convertToDate = (dateString: string) => {
+	const parts = dateString.split('-');
+	return new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+};
