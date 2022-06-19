@@ -11,6 +11,6 @@
 	};
 </script>
 
-<div class="grid max-w-lg grid-cols-1 gap-4 md:grid-cols-2">
+<div class="grid max-w-lg grid-cols-1 gap-4 md:grid-cols-1">
 	<SectionGridItem itemConfig={item} />
 </div>

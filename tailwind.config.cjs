@@ -12,7 +12,8 @@ const config = {
 			},
 			boxShadow: {
 				normal: '0 0.625rem 1.5rem 0rem rgba(0, 0, 0, 0.08)',
-				medium: '0 1.25rem 2.5rem rgba(0, 0, 0, 0.1)'
+				medium: '0 1.25rem 2.5rem rgba(0, 0, 0, 0.1)',
+				primary: '0 0.625rem 1.5rem rgba(141, 0, 0, 0.25)'
 			}
 		}
 	},
