@@ -4,8 +4,6 @@
 	export let tags;
 	export let title;
 	export let created;
-
-	console.log(new Date('13-05-2001'));
 </script>
 
 <div class="prose mx-auto">
