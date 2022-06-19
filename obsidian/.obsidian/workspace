@@ -89,14 +89,14 @@
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
     "Areas/Golang.md",
-    "Areas/Gitpod.md",
-    "Resources/web/Configure Gitpod.md",
+    "Areas/Best Practices.md",
     "Areas/Cloudinary.md",
+    "Areas/Tools.md",
     "Areas/Vercel.md",
+    "Areas/Tailwind.md",
     "Areas/Preview Environment.md",
     "Areas/Languages and Frameworks.md",
-    "Areas/Tailwind.md",
-    "Areas/Tools.md",
-    "Resources/web/Tailwind-Dark-Theme.md"
+    "Areas/Gitpod.md",
+    "index.md"
   ]
 }

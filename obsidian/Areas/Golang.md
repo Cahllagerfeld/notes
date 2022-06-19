@@ -8,5 +8,7 @@ Golang is a open-source programming language, **supported** by [[Google]].
 
 One of the biggest differences to the [[npm]]-ecosystem for example is the strong standard library Golang provides. You are not dependant on external 3rd party packages that may cause issues with the dependency-tree when upgrading packages.
 
+- [[Hexagonal Pattern]]
+
 ## References
 - https://go.dev
