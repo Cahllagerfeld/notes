@@ -18,3 +18,10 @@ export declare type TagItem = {
 	href: string;
 	title: string;
 };
+
+export declare type SectionItemConfig = {
+	title: string;
+	href: string;
+	icon: string;
+	alt: string;
+};
