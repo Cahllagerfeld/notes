@@ -23,6 +23,10 @@
 	let graphWidth: number;
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="/css/prism-one-dark.css" />
+</svelte:head>
+
 <div class="">
 	<slot />
 	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-lightgray" />
@@ -38,7 +42,7 @@
 					<Graph
 						height={400}
 						width={graphWidth}
-						class="w-full rounded-lg border border-gray-400"
+						class="w-full rounded-lg border border-lightgray"
 						{graph}
 					/>
 				</div>

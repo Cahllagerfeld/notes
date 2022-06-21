@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Vercel.md",
+            "file": "Areas/Golang.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Vercel.md",
+                "file": "Areas/Golang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Areas/Vercel.md",
-    "Resources/web/Vercel-getting-started.md",
-    "Resources/web/Cloudinary-Svelte-Society-Stream.md",
-    "Areas/Tools.md",
+    "Areas/Golang.md",
+    "Areas/Best Practices.md",
     "Areas/Cloudinary.md",
-    "Areas/Programming languages.md",
-    "index.md",
-    "005 Active MOC.md",
-    "000 index.md",
-    "Untitled.md"
+    "Areas/Tools.md",
+    "Areas/Vercel.md",
+    "Areas/Tailwind.md",
+    "Areas/Preview Environment.md",
+    "Areas/Languages and Frameworks.md",
+    "Areas/Gitpod.md",
+    "index.md"
   ]
 }

@@ -20,11 +20,14 @@
 		</div>
 	</div>
 	<MobileMenu />
+	<a class="hidden lg:block" target="_blank" href="https://github.com/Cahllagerfeld/notes">
+		<img src="/svg/github-corner.svg" class="absolute top-0 right-0 border-0" alt="github corner" />
+	</a>
 </nav>
 
 <style lang="postcss">
 	.scrolled-out {
-		@apply border-gray-400;
+		@apply border-lightgray;
 		background: hsl(0 5% 96% / 85%);
 		backdrop-filter: saturate(0.5) blur(5px);
 	}
