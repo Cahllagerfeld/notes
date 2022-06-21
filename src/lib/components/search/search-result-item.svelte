@@ -4,8 +4,8 @@
 	export let item: SearchItem;
 </script>
 
-{#if item.data}
+{#if item.frontmatter}
 	<div>
-		<a sveltekit:prefetch href={item.href}>{item.data.fm.title}</a>
+		<a sveltekit:prefetch href={item.href}>{item.frontmatter.title}</a>
 	</div>
 {/if}

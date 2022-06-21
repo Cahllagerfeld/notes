@@ -20,8 +20,6 @@ export declare type TagItem = {
 };
 
 export declare type SearchItem = {
-	code: string;
-	data?: Record<string, any>;
-	map?: string | undefined;
+	frontmatter: { [key: string]: any };
 	href: string;
 };
