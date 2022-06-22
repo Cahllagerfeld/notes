@@ -43,6 +43,7 @@
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.7.0",
 		"prettier-plugin-tailwindcss": "^0.1.10",
+		"remark-preview": "^1.0.2",
 		"remark-wiki-link": "0.0.4",
 		"svelte": "^3.47.0",
 		"svelte-check": "^2.2.6",

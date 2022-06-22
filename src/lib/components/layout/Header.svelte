@@ -13,8 +13,9 @@
 	<div class="px-4">
 		<div class="mx-auto flex h-16 items-center justify-between lg:container">
 			<a class="text-4xl" href="/">Julian's Page 🌴</a>
-			<Navigation />
+
 			<Search />
+			<Navigation />
 		</div>
 	</div>
 	<MobileMenu />

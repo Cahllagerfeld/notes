@@ -2,7 +2,9 @@
 	export const load = async () => {
 		return {
 			props: {
-				markdown: getMarkdown().map((file) => file.metadata)
+				markdown: getMarkdown().map((file) => {
+					return { metadata: file.metadata, href: file.href };
+				})
 			}
 		};
 	};
