@@ -4,6 +4,7 @@
 	import { showHideOverflowY } from '$lib/util/helpers';
 	import { navigating } from '$app/stores';
 	import { onMount } from 'svelte';
+	import Search from '$lib/components/layout/search.svelte';
 
 	$: if ($navigating) {
 		$showMobileMenu = false;
@@ -24,11 +25,12 @@
 
 {#if $showMobileMenu}
 	<div
-		class="absolute z-10 flex max-h-screen w-screen flex-col items-center overflow-y-auto bg-[#f9f9f9] shadow-md "
+		class="absolute z-10 flex max-h-screen w-screen flex-col items-center bg-[#f9f9f9] shadow-md "
 	>
-		<ul>
+		<ul class="w-full divide-y divide-lightgray border-t border-lightgray">
+			<li class="flex items-center justify-center py-4"><Search /></li>
 			{#each navbarItems as item}
-				<li class="py-4">
+				<li class="py-4 text-center">
 					<a href={item.href}>{item.title}</a>
 				</li>
 			{/each}
