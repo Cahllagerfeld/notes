@@ -2,10 +2,12 @@
 	import { navbarItems } from '$lib/contents/layout/header-items';
 	import { page } from '$app/stores';
 	import MobileMenuToggle from '$lib/components/layout/main-nav/mobile-nav/toggle.svelte';
+	import Search from '../search.svelte';
 </script>
 
 <div>
-	<ul class="hidden space-x-4 md:block">
+	<ul class="hidden items-center justify-between space-x-4 md:flex">
+		<li><Search /></li>
 		{#each navbarItems as item}
 			<li class:active={$page.url.pathname.includes(item.href)} class="inline">
 				<a

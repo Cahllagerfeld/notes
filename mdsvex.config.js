@@ -1,5 +1,6 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import wikilink from 'remark-wiki-link';
+import preview, { htmlFormatter, textFormatter } from 'remark-preview';
 import path from 'path';
 import prefetch from './src/lib/util/rehype-prefetch.js';
 import {
@@ -19,6 +20,16 @@ const config = defineConfig({
 	},
 
 	remarkPlugins: [
+		preview(textFormatter({ length: 150, maxBlocks: 2 })),
+		preview(
+			htmlFormatter({
+				length: 250,
+				maxBlocks: 2
+			}),
+			{
+				attribute: 'previewHtml'
+			}
+		),
 		[
 			wikilink,
 			{
