@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navigation from '$lib/components/layout/main-nav/index.svelte';
 	import MobileMenu from '$lib/components/layout/main-nav/mobile-nav/mobile-nav.svelte';
+	import Search from './search.svelte';
 	let scroll: number;
 </script>
 
@@ -13,6 +14,7 @@
 		<div class="mx-auto flex h-16 items-center justify-between lg:container">
 			<a class="text-4xl" href="/">Julian's Page 🌴</a>
 			<Navigation />
+			<Search />
 		</div>
 	</div>
 	<MobileMenu />
