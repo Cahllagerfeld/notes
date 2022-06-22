@@ -5,7 +5,6 @@
 	import { navigating } from '$app/stores';
 
 	let query = '';
-	let isFocused = false;
 
 	const markdown = getContext<any[]>(key);
 
@@ -40,8 +39,6 @@
 
 <div class="relative inline-block">
 	<input
-		on:focus={() => (isFocused = true)}
-		on:blur={() => (isFocused = false)}
 		bind:value={query}
 		class="rounded-lg border border-lightgray px-4 py-2"
 		name="search"
@@ -68,7 +65,7 @@
 		</svg>
 	</button>
 
-	{#if searchResults.length > 0 && isFocused}
+	{#if searchResults.length > 0}
 		<ul
 			class="b-1 absolute z-10 mt-2 max-h-80 w-full divide-y divide-lightgray overflow-y-auto rounded-md border border-lightgray bg-white shadow-sm"
 		>
