@@ -1,9 +1,13 @@
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: 
+      - main
 
 jobs:
-  cache-and-install:
+  Tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,6 +39,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - uses: microsoft/playwright-github-action@v1
+        name: Set up Playwright
+      
       - name: Install dependencies
         run: pnpm install
         
