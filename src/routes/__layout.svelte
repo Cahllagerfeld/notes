@@ -12,6 +12,7 @@
 
 <script lang="ts">
 	import Header from '../lib/components/layout/Header.svelte';
+	import Footer from '$lib/components/layout/footer.svelte';
 	import '../app.css';
 	import { getMarkdown } from '../lib/util/get-markdown';
 	import { key } from '$lib/contents/search';
@@ -27,4 +28,5 @@
 	<main class="mx-auto w-full px-4 md:container md:px-0">
 		<slot />
 	</main>
+	<Footer />
 </div>
