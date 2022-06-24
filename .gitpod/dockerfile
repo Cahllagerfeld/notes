@@ -1,0 +1,3 @@
+FROM gitpod/workspace-full-vnc
+
+RUN npx playwright install --with-deps
