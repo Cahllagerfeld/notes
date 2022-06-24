@@ -13,7 +13,8 @@ github:
     addBadge: true
     addLabel: false
 
-image: gitpod/workspace-full-vnc
+image: 
+  file: .gitpod/dockerfile
 
 vscode:
   extensions:
