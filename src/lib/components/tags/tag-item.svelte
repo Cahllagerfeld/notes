@@ -6,7 +6,7 @@
 
 <a
 	sveltekit:prefetch
-	class="rounded-xl border border-lightgray text-center transition-all duration-200 hover:border-darkred hover:bg-offwhite"
+	class="rounded-xl border border-skin-off-contrast text-center transition-all duration-200 hover:border-skin-accent hover:bg-skin-off"
 	href={tag.href}
 >
 	<div class=" w-full px-4 py-12  font-semibold">

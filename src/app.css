@@ -4,7 +4,15 @@
 @tailwind utilities;
 
 @layer base {
+	:root {
+		--color-background: #f9f9f9;
+		--color-accent: #8d0000;
+		--color-off-contrast: #bfbfbf;
+		--color-contrast: #2b2a2a;
+		--color-off: #ececec;
+	}
+
 	body {
-		@apply bg-[#f9f9f9] dark:bg-black;
+		@apply bg-skin-background;
 	}
 }

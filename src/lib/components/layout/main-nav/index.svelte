@@ -12,7 +12,7 @@
 			<li class:active={$page.url.pathname.includes(item.href)} class="inline">
 				<a
 					sveltekit:prefetch
-					class="underline-left relative transition-all duration-200 ease-in-out hover:text-darkgray"
+					class="underline-left relative transition-all duration-200 ease-in-out hover:text-skin-contrast"
 					href={item.href}>{@html item.title}</a
 				>
 			</li>
@@ -26,12 +26,12 @@
 		content: '';
 		transition: all 0.2s ease-in-out;
 		@apply invisible absolute bottom-[1px] left-0 h-[2px] w-0
-			bg-darkred;
+			bg-skin-accent;
 	}
 	.underline-left:hover:before {
 		@apply visible w-full;
 	}
 	.active {
-		@apply font-semibold text-darkred;
+		@apply font-semibold text-skin-accent;
 	}
 </style>

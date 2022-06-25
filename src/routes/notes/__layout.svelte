@@ -29,7 +29,7 @@
 
 <div class="">
 	<slot />
-	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-lightgray" />
+	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-skin-off-contrast" />
 	<div class="flex gap-4">
 		<div class="flex w-1/2">
 			<Backlinks {backlinks} />
@@ -42,7 +42,7 @@
 					<Graph
 						height={400}
 						width={graphWidth}
-						class="w-full rounded-lg border border-lightgray"
+						class="w-full rounded-lg border border-skin-off-contrast"
 						{graph}
 					/>
 				</div>

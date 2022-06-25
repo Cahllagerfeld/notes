@@ -7,7 +7,7 @@
 </script>
 
 <div class="prose mx-auto">
-	<h1 class="text-darkred">{title}</h1>
+	<h1 class="text-skin-accent">{title}</h1>
 	<div class="text-right">created at: {convertToDate(created).toLocaleDateString('en-US')}</div>
 	<div class="flex flex-wrap gap-2">
 		{#each tags as tag}
