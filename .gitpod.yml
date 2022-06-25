@@ -1,7 +1,9 @@
 tasks:
   - init: pnpm install
     command: npm run dev
-    before: npm i -g pnpm
+    before: |
+      npm i -g pnpm
+      npx --yes playwright install --with-deps
 github:
   prebuilds:
     master: true
@@ -13,8 +15,7 @@ github:
     addBadge: true
     addLabel: false
 
-image: 
-  file: .gitpod/dockerfile
+image: gitpod/workspace-full-vnc
 
 vscode:
   extensions:
