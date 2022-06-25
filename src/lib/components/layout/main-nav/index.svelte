@@ -13,7 +13,7 @@
 				<a
 					sveltekit:prefetch
 					class="underline-left relative transition-all duration-200 ease-in-out hover:text-skin-contrast"
-					href={item.href}>{@html item.title}</a
+					href={item.href}><i class="mr-1 {item.iconClasses}" />{@html item.title}</a
 				>
 			</li>
 		{/each}

@@ -47,7 +47,7 @@
 	/>
 	<button class="absolute right-0 top-0 mt-3 mr-2">
 		<svg
-			class="h-4 w-4 fill-current text-gray-600"
+			class="h-4 w-4 fill-current text-skin-off-contrast"
 			xmlns="http://www.w3.org/2000/svg"
 			version="1.1"
 			id="Capa_1"

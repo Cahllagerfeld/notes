@@ -16,7 +16,7 @@
 <script lang="ts">
 	import type { Backlink as BacklinkType, Edge, Node } from '$lib/types';
 	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
-	import Graph from '$lib/components/Graph.svelte';
+	import Graph from '$lib/components/graph.svelte';
 
 	export let backlinks: BacklinkType[];
 	export let graph: { edges: Edge[]; nodes: Node[] };
