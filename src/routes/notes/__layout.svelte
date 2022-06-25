@@ -16,7 +16,7 @@
 <script lang="ts">
 	import type { Backlink as BacklinkType, Edge, Node } from '$lib/types';
 	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
-	import Graph from '$lib/components/Graph.svelte';
+	import Graph from '$lib/components/graph.svelte';
 
 	export let backlinks: BacklinkType[];
 	export let graph: { edges: Edge[]; nodes: Node[] };
@@ -29,7 +29,7 @@
 
 <div class="">
 	<slot />
-	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-lightgray" />
+	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-skin-off-contrast" />
 	<div class="flex gap-4">
 		<div class="flex w-1/2">
 			<Backlinks {backlinks} />
@@ -42,7 +42,7 @@
 					<Graph
 						height={400}
 						width={graphWidth}
-						class="w-full rounded-lg border border-lightgray"
+						class="w-full rounded-lg border border-skin-off-contrast"
 						{graph}
 					/>
 				</div>

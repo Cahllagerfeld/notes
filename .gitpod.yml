@@ -3,7 +3,7 @@ tasks:
     command: npm run dev
     before: |
       npm i -g pnpm
-      npx --yes playwright install --with-deps
+      
 github:
   prebuilds:
     master: true

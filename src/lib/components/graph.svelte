@@ -136,9 +136,8 @@
 	{#each nodes as point}
 		<circle
 			on:click={() => goto(point.href)}
-			class="node cursor-pointer"
+			class="node cursor-pointer bg-skin-accent fill-skin-accent"
 			r="5"
-			fill={colourScale(point.group)}
 			cx={point.x}
 			cy={point.y}
 			transform="translate({transform.x} {transform.y}) scale({transform.k} {transform.k})"
@@ -154,7 +153,7 @@
 	}
 
 	circle {
-		stroke: #fff;
+		stroke: var(--color-background);
 		stroke-width: 1.5;
 	}
 </style>

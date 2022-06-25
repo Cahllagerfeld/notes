@@ -27,7 +27,7 @@
 	<div
 		class="absolute z-10 flex max-h-screen w-screen flex-col items-center bg-[#f9f9f9] shadow-md "
 	>
-		<ul class="w-full divide-y divide-lightgray border-t border-lightgray">
+		<ul class="w-full divide-y divide-skin-off-contrast border-t border-skin-off-contrast">
 			<li class="flex items-center justify-center py-4"><Search /></li>
 			{#each navbarItems as item}
 				<li class="py-4 text-center">

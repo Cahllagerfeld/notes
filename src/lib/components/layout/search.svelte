@@ -40,14 +40,14 @@
 <div class="relative inline-block">
 	<input
 		bind:value={query}
-		class="rounded-lg border border-lightgray px-4 py-2"
+		class="rounded-lg border border-skin-off-contrast px-4 py-2"
 		name="search"
 		type="search"
 		placeholder="Search"
 	/>
 	<button class="absolute right-0 top-0 mt-3 mr-2">
 		<svg
-			class="h-4 w-4 fill-current text-gray-600"
+			class="h-4 w-4 fill-current text-skin-off-contrast"
 			xmlns="http://www.w3.org/2000/svg"
 			version="1.1"
 			id="Capa_1"
@@ -67,10 +67,10 @@
 
 	{#if searchResults.length > 0}
 		<ul
-			class="b-1 absolute z-10 mt-2 max-h-80 w-full divide-y divide-lightgray overflow-y-auto rounded-md border border-lightgray bg-white shadow-sm"
+			class="b-1 absolute z-10 mt-2 max-h-80 w-full divide-y divide-skin-off-contrast overflow-y-auto rounded-md border border-skin-off-contrast bg-white shadow-sm"
 		>
 			{#each searchResults as searchResult}
-				<li class="inline-block w-full  p-2 hover:bg-lightgray">
+				<li class="inline-block w-full  p-2 hover:bg-skin-off-contrast">
 					<a class="block" sveltekit:prefetch href={searchResult.item.href}
 						>{searchResult.item.metadata.title}</a
 					>

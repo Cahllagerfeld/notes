@@ -23,8 +23,8 @@
 
 <style lang="postcss">
 	.scrolled-out {
-		@apply border-lightgray;
-		background: hsl(0 5% 96% / 85%);
+		@apply border-skin-off-contrast;
+		background: hsl(0 0% 98% / 85%);
 		backdrop-filter: saturate(0.5) blur(5px);
 	}
 </style>
