@@ -6,7 +6,7 @@
 	export let created;
 </script>
 
-<div class="prose mx-auto">
+<div class="prose mx-auto dark:prose-dark">
 	<h1 class="text-skin-accent">{title}</h1>
 	<div class="text-right">created at: {convertToDate(created).toLocaleDateString('en-US')}</div>
 	<div class="flex flex-wrap gap-2">

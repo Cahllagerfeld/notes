@@ -9,10 +9,12 @@
 	<ul class="hidden items-center justify-between space-x-4 md:flex">
 		<li><Search /></li>
 		{#each navbarItems as item}
-			<li class:active={$page.url.pathname.includes(item.href)} class="inline">
+			<li class="inline">
 				<a
 					sveltekit:prefetch
-					class="underline-left relative transition-all duration-200 ease-in-out hover:text-skin-contrast"
+					class="underline-left {$page.url.pathname.includes(item.href)
+						? 'font-semibold text-skin-accent dark:text-skin-accent'
+						: ' dark:text-skin-text-highlight'} relative transition-all duration-200 ease-in-out hover:text-skin-contrast"
 					href={item.href}><i class="mr-1 {item.iconClasses}" />{@html item.title}</a
 				>
 			</li>
@@ -30,8 +32,5 @@
 	}
 	.underline-left:hover:before {
 		@apply visible w-full;
-	}
-	.active {
-		@apply font-semibold text-skin-accent;
 	}
 </style>

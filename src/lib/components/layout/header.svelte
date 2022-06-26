@@ -11,7 +11,7 @@
 >
 	<div class="px-4">
 		<div class="mx-auto flex h-16 items-center justify-between lg:container">
-			<a class="text-4xl" href="/">Julian's Page 🌴</a>
+			<a class="text-4xl dark:text-skin-text-highlight" href="/">Julian's Page 🌴</a>
 			<Navigation />
 		</div>
 	</div>
@@ -24,7 +24,7 @@
 <style lang="postcss">
 	.scrolled-out {
 		@apply border-skin-off-contrast;
-		background: hsl(0 0% 98% / 85%);
+		background: var(--color-background);
 		backdrop-filter: saturate(0.5) blur(5px);
 	}
 </style>
