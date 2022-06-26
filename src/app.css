@@ -6,13 +6,36 @@
 @layer base {
 	:root {
 		--color-background: #f9f9f9;
+		--color-text: #2b2a2a;
+		--color-text-highlight: #2b2a2a;
+		--color-off-background: #e1e1e1;
 		--color-accent: #8d0000;
 		--color-off-contrast: #bfbfbf;
 		--color-contrast: #2b2a2a;
 		--color-off: #ececec;
 	}
 
+	.dark {
+		--color-background: #1d1d1d;
+		--color-text: #ffffff99;
+		--color-text-highlight: #ffffffde;
+		--color-off-background: #333333;
+		--color-accent: #bf0000;
+		--color-off-contrast: #bfbfbf;
+		--color-contrast: #ececec;
+		--color-off: #ececec;
+	}
+
 	body {
-		@apply bg-skin-background text-skin-contrast;
+		@apply bg-skin-background text-skin-text;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply dark:text-skin-text-highlight;
 	}
 }

@@ -1,4 +1,8 @@
-<footer class="mt-auto bg-skin-contrast px-16 py-20">
+<script lang="ts">
+	import DarkThemeToggle from './dark-theme-toggle.svelte';
+</script>
+
+<footer class="mt-auto flex flex-col bg-skin-contrast px-16 py-20 dark:bg-skin-off-background">
 	<ul class="flex justify-center gap-4">
 		<li>
 			<a href="https://www.twitter.com/CahlLagerfeld">
@@ -15,5 +19,8 @@
 			</a>
 		</li>
 	</ul>
-	<p class="mt-12 text-center text-skin-off">© 2022</p>
+	<div class="mt-12 flex items-center justify-center gap-4">
+		<p class="text-center text-skin-off">© 2022</p>
+		<DarkThemeToggle />
+	</div>
 </footer>
