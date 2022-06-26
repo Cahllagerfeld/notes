@@ -67,10 +67,12 @@
 
 	{#if searchResults.length > 0}
 		<ul
-			class="b-1 absolute z-10 mt-2 max-h-80 w-full divide-y divide-skin-off-contrast overflow-y-auto rounded-md border border-skin-off-contrast bg-white shadow-sm"
+			class="b-1 absolute z-10 mt-2 max-h-80 w-full divide-y divide-skin-off-contrast overflow-y-auto rounded-md border border-skin-off-contrast bg-skin-background shadow-sm"
 		>
 			{#each searchResults as searchResult}
-				<li class="inline-block w-full  p-2 hover:bg-skin-off-contrast">
+				<li
+					class="inline-block w-full  p-2 hover:bg-skin-off-contrast dark:hover:text-skin-background"
+				>
 					<a class="block" sveltekit:prefetch href={searchResult.item.href}
 						>{searchResult.item.metadata.title}</a
 					>
