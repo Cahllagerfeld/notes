@@ -40,7 +40,7 @@
 <div class="relative inline-block">
 	<input
 		bind:value={query}
-		class="rounded-lg border border-skin-off-contrast bg-skin-off-background px-4 py-2"
+		class="rounded-lg border border-skin-off-contrast bg-skin-background px-4 py-2"
 		name="search"
 		type="search"
 		placeholder="Search"

@@ -58,6 +58,6 @@
 
 <style lang="postcss">
 	.active {
-		@apply text-skin-accent;
+		@apply !text-skin-accent;
 	}
 </style>
