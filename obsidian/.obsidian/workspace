@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Areas/Golang.md",
+            "file": "Areas/Tailwind.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Golang.md",
+                "file": "Areas/Tailwind.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
+    "Areas/Tailwind.md",
+    "Resources/web/Theming with Tailwind.md",
+    "Resources/web/Theming in CSS.md",
+    "Resources/web/Tailwind-Dark-Theme.md",
+    "Projects/Implementing a Dark Theme.md",
+    "index.md",
+    "Untitled.md",
     "Areas/Golang.md",
     "Areas/Best Practices.md",
-    "Areas/Cloudinary.md",
-    "Areas/Tools.md",
-    "Areas/Vercel.md",
-    "Areas/Tailwind.md",
-    "Areas/Preview Environment.md",
-    "Areas/Languages and Frameworks.md",
-    "Areas/Gitpod.md",
-    "index.md"
+    "Areas/Cloudinary.md"
   ]
 }
