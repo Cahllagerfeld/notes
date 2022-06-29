@@ -13,7 +13,7 @@ Instead we declare CSS variables with the following syntax in the file where the
 ```
 
 These values can be scoped to different classes, which means that the variables defined in `:root`-selector can be overwritten by defining them inside the `.dark`-class for example:
-```
+```css
 .dark{
 	--color-primary: #bf0000
 }
@@ -22,7 +22,6 @@ These values can be scoped to different classes, which means that the variables 
 Inside `tailwind.config.cjs`, these variables can be referenced like so: 
 
 ```js
-
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
