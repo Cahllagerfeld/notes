@@ -1,16 +1,6 @@
-<script context="module">
-	export const load = async () => {
-		return {
-			props: {
-				markdown: getMarkdown().map((file) => {
-					return { metadata: file.metadata, href: file.href };
-				})
-			}
-		};
-	};
-</script>
-
 <script lang="ts">
+	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
 	import Header from '../lib/components/layout/header.svelte';
 	import Footer from '$lib/components/layout/footer.svelte';
 	import '../app.css';

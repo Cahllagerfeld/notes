@@ -1,6 +1,8 @@
+throw new Error("@migration task: Update +page.server.js (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292699)");
+
 import { getMarkdownFiles, getFrontmatter } from '$lib/util/markdown';
 import { toSlug } from '$lib/util/wiki-link';
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
 import path from 'path';
 
 export const get: RequestHandler = async ({ params }) => {

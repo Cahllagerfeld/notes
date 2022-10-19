@@ -1,19 +1,6 @@
-<script context="module">
-	export const load = async ({ url, fetch }) => {
-		const encodedPath = url.pathname.replace(/\//g, '__');
-		const graphData = await fetch(`/api/${encodedPath}.garden-meta.json`);
-		const graph = await graphData.json();
-
-		return {
-			props: {
-				backlinks: graph.backlinks,
-				graph: { nodes: graph.nodes, edges: graph.edges }
-			}
-		};
-	};
-</script>
-
 <script lang="ts">
+	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
 	import type { Backlink as BacklinkType, Edge, Node } from '$lib/types';
 	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
 	import Graph from '$lib/components/graph.svelte';
