@@ -2,9 +2,8 @@
 	"name": "notes",
 	"version": "0.0.1",
 	"scripts": {
-		"obsidian": "node scripts/prepare-obsidian.js",
-		"dev": "pnpm obsidian && vite dev",
-		"build": "pnpm obsidian && vite build",
+		"dev": "vite dev",
+		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync && husky install",
 		"test": "playwright test",

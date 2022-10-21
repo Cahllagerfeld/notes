@@ -1,5 +1,3 @@
-throw new Error("@migration task: Update +server.js (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
-
 import fs from 'fs';
 import path from 'path';
 import wikiLink from 'remark-wiki-link';
@@ -9,9 +7,10 @@ import { compile } from 'mdsvex';
 import mergeWith from 'lodash/mergeWith.js';
 import isArray from 'lodash/isArray.js';
 import type { Node, Edge, Backlink } from '$lib/types';
-import type { RequestHandler } from '@sveltejs/kit';
+import type { RequestHandler } from './$types';
+import { json } from '@sveltejs/kit';
 
-export const get: RequestHandler = async ({ params }) => {
+export const GET: RequestHandler = async ({ params }) => {
 	const resolvedPath = resolveFilePath(params.slug);
 	const dir = 'src/routes/notes';
 	const items = getMarkdownFiles(path.join(dir));
@@ -32,13 +31,11 @@ export const get: RequestHandler = async ({ params }) => {
 	}
 	const filteredBacklinkgs = backlinks[resolvedPath];
 	const { edges: filteredEdges, nodes: filteredNodes } = filterGraph(resolvedPath, edges, nodes);
-	return {
-		body: {
-			nodes: filteredNodes,
-			edges: filteredEdges,
-			backlinks: filteredBacklinkgs
-		}
-	};
+	return json({
+		nodes: filteredNodes,
+		edges: filteredEdges,
+		backlinks: filteredBacklinkgs
+	});
 };
 
 function resolveFilePath(encodedPath: string) {

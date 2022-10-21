@@ -17,7 +17,7 @@
 	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-skin-off-contrast" />
 	<div class="flex gap-4">
 		<div class="flex w-1/2">
-			<Backlinks {data.backlinks} />
+			<Backlinks backlinks={data.backlinks} />
 		</div>
 		<div class="w-1/2 ">
 			<h2>Graph</h2>
@@ -28,7 +28,7 @@
 						height={400}
 						width={graphWidth}
 						class="w-full rounded-lg border border-skin-off-contrast"
-						{data.graph}
+						graph={data.graph}
 					/>
 				</div>
 			{/key}
