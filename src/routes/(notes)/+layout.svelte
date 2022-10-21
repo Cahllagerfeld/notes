@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
-	import type { Backlink as BacklinkType, Edge, Node } from '$lib/types';
 	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
 	import Graph from '$lib/components/graph.svelte';
 
