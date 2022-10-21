@@ -1,4 +1,5 @@
-export const load = async ({ url, fetch }) => {
+import type { LayoutLoad } from './$types';
+export const load: LayoutLoad = async ({ url, fetch }) => {
 	const encodedPath = url.pathname.replace(/\//g, '__');
 	const graphData = await fetch(`/api/${encodedPath}.garden-meta.json`);
 	const graph = await graphData.json();

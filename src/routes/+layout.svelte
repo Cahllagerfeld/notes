@@ -1,16 +1,14 @@
 <script lang="ts">
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
 	import Header from '../lib/components/layout/header.svelte';
 	import Footer from '$lib/components/layout/footer.svelte';
 	import '../app.css';
-	import { getMarkdown } from '../lib/util/get-markdown';
 	import { key } from '$lib/contents/search';
 	import { setContext } from 'svelte';
+	import type { PageData } from './$types';
 
-	export let markdown: any[];
+	export let data: PageData;
 
-	setContext(key, markdown);
+	setContext(key, data.markdown);
 </script>
 
 <div class="flex min-h-screen  flex-col md:mx-0">

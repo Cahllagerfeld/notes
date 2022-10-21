@@ -1,12 +1,10 @@
 <script lang="ts">
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
+	import type { LayoutData } from './$types';
 	import type { Backlink as BacklinkType, Edge, Node } from '$lib/types';
 	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
 	import Graph from '$lib/components/graph.svelte';
 
-	export let backlinks: BacklinkType[];
-	export let graph: { edges: Edge[]; nodes: Node[] };
+	export let data: LayoutData;
 	let graphWidth: number;
 </script>
 
@@ -19,18 +17,18 @@
 	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-skin-off-contrast" />
 	<div class="flex gap-4">
 		<div class="flex w-1/2">
-			<Backlinks {backlinks} />
+			<Backlinks {data.backlinks} />
 		</div>
 		<div class="w-1/2 ">
 			<h2>Graph</h2>
 
-			{#key [graph, graphWidth]}
+			{#key [data.graph, graphWidth]}
 				<div bind:offsetWidth={graphWidth}>
 					<Graph
 						height={400}
 						width={graphWidth}
 						class="w-full rounded-lg border border-skin-off-contrast"
-						{graph}
+						{data.graph}
 					/>
 				</div>
 			{/key}
