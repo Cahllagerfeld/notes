@@ -2,7 +2,6 @@ import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import wikilink from 'remark-wiki-link';
 import preview, { htmlFormatter, textFormatter } from 'remark-preview';
 import path from 'path';
-import prefetch from './src/lib/util/rehype-prefetch.js';
 import {
 	getMarkdownFiles,
 	parseFileNameFromPath,
@@ -49,8 +48,7 @@ const config = defineConfig({
 				aliasDivider: '|'
 			}
 		]
-	],
-	rehypePlugins: [prefetch]
+	]
 });
 
 export default config;

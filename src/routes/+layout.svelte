@@ -11,7 +11,7 @@
 	setContext(key, data.markdown);
 </script>
 
-<div data-sveltekit-prefetch class="flex min-h-screen  flex-col md:mx-0">
+<div data-sveltekit-preload-data="hover" class="flex min-h-screen  flex-col md:mx-0">
 	<Header />
 	<main class="mx-auto w-full px-4 pb-12 md:container md:px-0">
 		<slot />

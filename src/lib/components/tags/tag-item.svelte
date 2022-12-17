@@ -5,7 +5,6 @@
 </script>
 
 <a
-	sveltekit:prefetch
 	class="rounded-xl border border-skin-off-contrast text-center transition-all duration-200 hover:border-skin-accent hover:bg-skin-off"
 	href={tag.href}
 >

@@ -11,7 +11,6 @@
 		{#each navbarItems as item}
 			<li class="inline">
 				<a
-					sveltekit:prefetch
 					class="underline-left {$page.url.pathname.includes(item.href)
 						? 'font-semibold text-skin-accent dark:text-skin-accent'
 						: ' dark:text-skin-text-highlight'} relative transition-all duration-200 ease-in-out hover:text-skin-contrast"

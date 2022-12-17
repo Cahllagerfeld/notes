@@ -4,4 +4,4 @@
 	export let backlink: Backlink;
 </script>
 
-<a sveltekit:prefetch class="font-semibold" href={backlink.href}>{backlink.title}</a>
+<a class="font-semibold" href={backlink.href}>{backlink.title}</a>
