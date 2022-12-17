@@ -17,7 +17,7 @@ export const load: PageLoad = async ({ params }) => {
 			});
 		})
 		.map((item) => {
-			return { href: toSlug(item, 'src/routes'), title: getFrontmatter(item).data.title };
+			return { href: toSlug(item, 'obsidian'), title: getFrontmatter(item).data.title };
 		});
 	return { items: filteredItems };
 };

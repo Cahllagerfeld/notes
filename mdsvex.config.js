@@ -32,13 +32,14 @@ const config = defineConfig({
 				pageResolver: (permalink) => {
 					const dir = path.join(process.cwd(), 'obsidian');
 					const allFiles = getMarkdownFiles(dir);
-					console.log(allFiles);
 					const result = allFiles.find((file) => {
 						const parsedFileName = parseFileNameFromPath(file);
 						const match = normalizeFileName(permalink) === normalizeFileName(parsedFileName);
 						return match;
 					});
-					return result !== undefined && result.length > 0 ? [toSlug(result, dir)] : ['/'];
+					return result !== undefined && result.length > 0
+						? [`/notes${toSlug(result, dir)}`]
+						: ['/'];
 				},
 				hrefTemplate: (permalink) => {
 					return `${permalink}`;
