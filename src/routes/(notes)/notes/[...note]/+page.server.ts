@@ -45,7 +45,7 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 						});
 						return result !== undefined && result.length > 0
 							? [`/notes${toSlug(result, '/obsidian')}`]
-							: ['/'];
+							: ['/notes/index'];
 					},
 					hrefTemplate: (permalink) => {
 						return `${permalink}`;

@@ -39,7 +39,7 @@ const config = defineConfig({
 					});
 					return result !== undefined && result.length > 0
 						? [`/notes${toSlug(result, dir)}`]
-						: ['/'];
+						: ['/notes/index'];
 				},
 				hrefTemplate: (permalink) => {
 					return `${permalink}`;
