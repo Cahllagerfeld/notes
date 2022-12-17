@@ -1,10 +1,9 @@
 import { getMarkdownFiles, getFrontmatter } from '$lib/util/markdown';
 import { toSlug } from '$lib/util/wiki-link';
-import type { RequestHandler } from './$types';
 import path from 'path';
-import { json } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
-export const GET: RequestHandler = async ({ params }) => {
+export const load: PageLoad = async ({ params }) => {
 	const tags = params.tags;
 	const splitTags = tags.split(',');
 	const dir = 'src/routes/notes';
@@ -20,7 +19,5 @@ export const GET: RequestHandler = async ({ params }) => {
 		.map((item) => {
 			return { href: toSlug(item, 'src/routes'), title: getFrontmatter(item).data.title };
 		});
-	return json({
-		items: filteredItems
-	});
+	return { items: filteredItems };
 };
