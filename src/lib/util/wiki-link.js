@@ -62,8 +62,7 @@ export function toSlug(fileName, dir) {
 			.replace(dir, '')
 			.replace(/ /g, '-')
 			// .replace('/', '-')
-			.replace('.md', '')
-			.replace('index', '')).toLowerCase();
+			.replace('.md', '')).toLowerCase();
 	}
 	return '/';
 }
