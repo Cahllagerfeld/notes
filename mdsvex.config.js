@@ -11,9 +11,6 @@ import {
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
-	layout: {
-		notes: './src/lib/components/notes/layout.svelte'
-	},
 	smartypants: {
 		dashes: 'oldschool'
 	},
@@ -33,8 +30,9 @@ const config = defineConfig({
 			wikilink,
 			{
 				pageResolver: (permalink) => {
-					const dir = path.join(process.cwd(), 'src/routes');
+					const dir = path.join(process.cwd(), 'obsidian');
 					const allFiles = getMarkdownFiles(dir);
+					console.log(allFiles);
 					const result = allFiles.find((file) => {
 						const parsedFileName = parseFileNameFromPath(file);
 						const match = normalizeFileName(permalink) === normalizeFileName(parsedFileName);

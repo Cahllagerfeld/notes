@@ -12,7 +12,7 @@ import { json } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ params }) => {
 	const resolvedPath = resolveFilePath(params.slug);
-	const dir = 'src/routes/notes';
+	const dir = 'obsidian';
 	const items = getMarkdownFiles(path.join(dir));
 	let nodes: Node[] = [];
 	let edges: Edge[] = [];

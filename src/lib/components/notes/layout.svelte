@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import Tag from './tag.svelte';
 	import { convertToDate } from '$lib/util/helpers';
-	export let tags;
-	export let title;
-	export let created;
+	export let tags: string[];
+	export let title: string;
+	export let created: string;
 </script>
 
 <div class="prose mx-auto dark:prose-dark">

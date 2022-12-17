@@ -4,9 +4,9 @@ import path from 'path';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-	const tags = params.tags;
+	const tags = params.tag;
 	const splitTags = tags.split(',');
-	const dir = 'src/routes/notes';
+	const dir = 'obsidian';
 	const items = getMarkdownFiles(path.join(dir));
 	const filteredItems = items
 		.filter((item) => {

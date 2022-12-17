@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { LayoutData } from './$types';
-	import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
-	import Graph from '$lib/components/graph.svelte';
+	// import type { LayoutData } from './$types';
+	// import Backlinks from '$lib/components/notes/backlinks/backlinks.svelte';
+	// import Graph from '$lib/components/graph.svelte';
 
-	export let data: LayoutData;
-	let graphWidth: number;
+	// export let data: LayoutData;
+	// let graphWidth: number;
 </script>
 
 <svelte:head>
@@ -14,7 +14,7 @@
 <div class="">
 	<slot />
 	<hr class="mx-auto my-16 h-[2px] w-1/4 bg-skin-off-contrast" />
-	<div class="flex gap-4">
+	<!-- <div class="flex gap-4">
 		<div class="flex w-1/2">
 			<Backlinks backlinks={data.backlinks} />
 		</div>
@@ -32,5 +32,5 @@
 				</div>
 			{/key}
 		</div>
-	</div>
+	</div> -->
 </div>
