@@ -4,15 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "683556fab06abaf2",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Areas/Tailwind.md",
-            "mode": "source"
+        "id": "d69e22ba54c5f474",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "683556fab06abaf2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Areas/Tools.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
-        }
+        ]
       }
     ],
     "direction": "vertical"
@@ -30,7 +37,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -68,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Tailwind.md",
+                "file": "Areas/Tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +97,15 @@
   },
   "active": "683556fab06abaf2",
   "lastOpenFiles": [
-    "Areas/Tailwind.md",
-    "Resources/web/Theming with Tailwind.md",
-    "Resources/web/Theming in CSS.md",
-    "Resources/web/Tailwind-Dark-Theme.md",
-    "Projects/Implementing a Dark Theme.md",
+    "005 Active MOC.md",
     "index.md",
-    "Untitled.md",
-    "Areas/Golang.md",
-    "Areas/Best Practices.md",
-    "Areas/Cloudinary.md"
+    "templates/note-template.md",
+    "Resources/web/Cloudinary-Svelte-Society-Stream.md",
+    "Resources/web/Configure Gitpod.md",
+    "Areas/Vercel.md",
+    "Areas/Tools.md",
+    "Areas/Tailwind.md",
+    "Areas/Preview Environment.md",
+    "Areas/Golang.md"
   ]
 }
