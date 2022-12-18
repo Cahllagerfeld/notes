@@ -1,4 +1,5 @@
 import type { PageLoad } from './$types';
+import slugify from 'slugify';
 
 export const load: PageLoad = async () => {
 	const metadata = Object.values(import.meta.glob('/obsidian/**/*.md', { eager: true })).map(
@@ -14,16 +15,18 @@ export const load: PageLoad = async () => {
 
 		if (tags) {
 			tags.forEach((tag: string) => {
-				if (!postByTag[tag]) {
-					postByTag[tag] = [];
+				const sluggedTag = slugify(tag);
+				if (!postByTag[sluggedTag]) {
+					postByTag[sluggedTag] = [];
 				}
-				postByTag[tag].push(data);
+				postByTag[sluggedTag].push(data);
 			});
 		}
 	});
 
 	const tags = Object.keys(postByTag).sort();
 
+	console.log(tags);
 	return {
 		tags,
 		postByTag

@@ -1,10 +1,4 @@
-import matter from 'gray-matter';
 import fs from 'fs';
-
-export function getFrontmatter(filePath: string) {
-	const content = fs.readFileSync(filePath, 'utf8');
-	return matter(content);
-}
 
 export function getMarkdownFiles(dir: string) {
 	let results: string[] = [];
