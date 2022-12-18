@@ -14,6 +14,7 @@ export const GET: RequestHandler = async ({ params }) => {
 	);
 
 	const note = allNotes.find((note) => note.path.toLowerCase() === `${slug}.md`);
+	console.log(note);
 
 	if (!note) {
 		return json({ error: `Note ${slug} not found` }, { status: 404 });
