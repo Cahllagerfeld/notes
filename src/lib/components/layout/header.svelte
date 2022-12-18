@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<MobileMenu />
-	<a class="hidden lg:block" target="_blank" href="https://github.com/Cahllagerfeld/notes">
+	<a class="hidden lg:block" href="https://github.com/Cahllagerfeld/notes">
 		<img src="/svg/github-corner.svg" class="absolute top-0 right-0 border-0" alt="github corner" />
 	</a>
 </nav>

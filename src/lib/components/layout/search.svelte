@@ -73,7 +73,7 @@
 				<li
 					class="inline-block w-full  p-2 hover:bg-skin-off-contrast dark:hover:text-skin-background"
 				>
-					<a class="block" sveltekit:prefetch href={searchResult.item.href}
+					<a class="block" href={`/notes${searchResult.item.href}`}
 						>{searchResult.item.metadata.title}</a
 					>
 				</li>

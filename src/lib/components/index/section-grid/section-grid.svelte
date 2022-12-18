@@ -5,7 +5,7 @@
 
 	const item: SectionItemConfig = {
 		alt: 'Test',
-		href: '/notes',
+		href: '/notes/index',
 		title: 'Digital Garden',
 		icon: '/images/emojis/potted-plant.png'
 	};

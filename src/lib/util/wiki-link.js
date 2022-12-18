@@ -60,9 +60,9 @@ export function toSlug(fileName, dir) {
 	if (fileName.includes(dir)) {
 		return (fileName = fileName
 			.replace(dir, '')
-			// .replace(/\s/g, '-')
-			.replace('.md', '')
-			.replace('index', ''));
+			.replace(/ /g, '-')
+			// .replace('/', '-')
+			.replace('.md', '')).toLowerCase();
 	}
 	return '/';
 }

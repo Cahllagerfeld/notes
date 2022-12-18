@@ -1,9 +1,9 @@
 import { toSlug } from './wiki-link';
 
 export function getMarkdown() {
-	const files = Object.entries(import.meta.globEager('/src/routes/**/*.md')).map(
+	const files = Object.entries(import.meta.glob('/obsidian/**/*.md', { eager: true })).map(
 		([path, data]) => ({
-			href: toSlug(path, '/src/routes'),
+			href: toSlug(path, '/obsidian'),
 			metadata: data.metadata,
 			component: data.default
 		})

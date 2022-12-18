@@ -2,7 +2,6 @@ import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import wikilink from 'remark-wiki-link';
 import preview, { htmlFormatter, textFormatter } from 'remark-preview';
 import path from 'path';
-import prefetch from './src/lib/util/rehype-prefetch.js';
 import {
 	getMarkdownFiles,
 	parseFileNameFromPath,
@@ -12,9 +11,6 @@ import {
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
-	layout: {
-		notes: './src/lib/components/notes/layout.svelte'
-	},
 	smartypants: {
 		dashes: 'oldschool'
 	},
@@ -34,14 +30,16 @@ const config = defineConfig({
 			wikilink,
 			{
 				pageResolver: (permalink) => {
-					const dir = path.join(process.cwd(), 'src/routes');
+					const dir = path.join(process.cwd(), 'obsidian');
 					const allFiles = getMarkdownFiles(dir);
 					const result = allFiles.find((file) => {
 						const parsedFileName = parseFileNameFromPath(file);
 						const match = normalizeFileName(permalink) === normalizeFileName(parsedFileName);
 						return match;
 					});
-					return result !== undefined && result.length > 0 ? [toSlug(result, dir)] : ['/'];
+					return result !== undefined && result.length > 0
+						? [`/notes${toSlug(result, dir)}`]
+						: ['/notes/index'];
 				},
 				hrefTemplate: (permalink) => {
 					return `${permalink}`;
@@ -49,8 +47,7 @@ const config = defineConfig({
 				aliasDivider: '|'
 			}
 		]
-	],
-	rehypePlugins: [prefetch]
+	]
 });
 
 export default config;
