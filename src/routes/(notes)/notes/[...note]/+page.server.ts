@@ -59,8 +59,12 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 		data: any;
 		map: any;
 	};
+	const code = compiled.code
+		.replace(/>{@html `<code class="language-/g, '><code class="language-')
+		.replace(/<\/code>`}<\/pre>/g, '</code></pre>');
+
 	return {
-		html: compiled.code,
+		html: code,
 		meta: { ...compiled.data.fm, slug: params.note }
 	};
 };
