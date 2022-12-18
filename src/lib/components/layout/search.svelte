@@ -73,7 +73,9 @@
 				<li
 					class="inline-block w-full  p-2 hover:bg-skin-off-contrast dark:hover:text-skin-background"
 				>
-					<a class="block" href={searchResult.item.href}>{searchResult.item.metadata.title}</a>
+					<a class="block" href={`/notes${searchResult.item.href}`}
+						>{searchResult.item.metadata.title}</a
+					>
 				</li>
 			{/each}
 		</ul>

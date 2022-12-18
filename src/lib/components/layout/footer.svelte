@@ -2,7 +2,7 @@
 	import DarkThemeToggle from './dark-theme-toggle.svelte';
 </script>
 
-<footer class="mt-auto flex flex-col bg-skin-contrast px-16 py-20 dark:bg-skin-off-background">
+<footer class="mt-auto flex flex-col bg-skin-contrast px-16 py-16 dark:bg-skin-off-background">
 	<ul class="flex justify-center gap-4">
 		<li>
 			<a href="https://www.twitter.com/CahlLagerfeld">
