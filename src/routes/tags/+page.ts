@@ -27,7 +27,7 @@ export const load: PageLoad = async () => {
 		}
 	});
 
-	const tags = Object.keys(postByTag).sort();
+	const tags = Object.keys(postByTag).sort((a, b) => a.localeCompare(b));
 
 	return {
 		tags,

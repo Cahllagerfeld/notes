@@ -36,6 +36,10 @@
 	h4,
 	h5,
 	h6 {
-		@apply dark:text-skin-text-highlight;
+		@apply font-bold text-skin-accent;
+	}
+
+	a {
+		@apply underline transition-all delay-[50] duration-200 hover:decoration-transparent;
 	}
 }
