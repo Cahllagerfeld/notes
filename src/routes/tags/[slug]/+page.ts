@@ -1,7 +1,8 @@
 import type { PageLoad } from './$types';
 import slugify from 'slugify';
 
-export const load: PageLoad = async () => {
+export const load: PageLoad = async ({ params }) => {
+	const slug = params.slug;
 	const metadata = Object.entries(import.meta.glob('/obsidian/**/*.md', { eager: true })).map(
 		([path, loader]) => {
 			return {
@@ -27,10 +28,8 @@ export const load: PageLoad = async () => {
 		}
 	});
 
-	const tags = Object.keys(postByTag).sort((a, b) => a.localeCompare(b));
-
 	return {
-		tags,
+		slug,
 		postByTag
 	};
 };
