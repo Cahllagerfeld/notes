@@ -3,7 +3,6 @@
 
 	export let data: PageData;
 	const { slug, postByTag } = data;
-	console.log(postByTag[slug]);
 </script>
 
 {#if postByTag[slug]}
@@ -15,5 +14,5 @@
 		{/each}
 	</ul>
 {:else}
-	Dummy
+	No Entries for {slug} found :(
 {/if}
