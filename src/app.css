@@ -39,7 +39,7 @@
 		@apply font-bold text-skin-accent;
 	}
 
-	a {
+	a:not([class]) {
 		@apply underline transition-all delay-[50] duration-200 hover:decoration-transparent;
 	}
 }
