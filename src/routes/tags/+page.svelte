@@ -7,6 +7,6 @@
 <h1>Tags</h1>
 <ul>
 	{#each data.tags as tag}
-		<li>{tag} ({data.postByTag[tag].length})</li>
+		<li><a href="/tags/{tag}">{tag} ({data.postByTag[tag].length})</a></li>
 	{/each}
 </ul>
