@@ -6,7 +6,7 @@
 @layer base {
 	:root {
 		--color-background: #f9f9f9;
-		--color-text: #2b2a2a;
+		--color-text: #27272a;
 		--color-text-highlight: #2b2a2a;
 		--color-off-background: #e1e1e1;
 		--color-accent: #8d0000;
@@ -36,10 +36,6 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-bold text-skin-accent;
-	}
-
-	a:not([class]) {
-		@apply underline transition-all delay-[50] duration-200 hover:decoration-transparent;
+		@apply font-bold text-skin-text-highlight;
 	}
 }

@@ -25,3 +25,12 @@ export declare type SectionItemConfig = {
 	icon: string;
 	alt: string;
 };
+
+export declare type Frontmatter = {
+	title: string;
+	tags: string[];
+	created: string;
+	preview: string;
+	previewHtml: string;
+	href: string;
+};

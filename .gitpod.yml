@@ -3,7 +3,7 @@ tasks:
     command: npm run dev
     before: |
       npm i -g pnpm
-      
+
 github:
   prebuilds:
     master: true
