@@ -3,7 +3,6 @@ import { compile } from 'mdsvex';
 import { error } from '@sveltejs/kit';
 import wikilink from 'remark-wiki-link';
 import preview, { htmlFormatter, textFormatter } from 'remark-preview';
-import path from 'path';
 import { parseFileNameFromPath, normalizeFileName, toSlug } from '$lib/util/wiki-link.js';
 
 export const load: PageServerLoad = async ({ params, fetch }) => {
