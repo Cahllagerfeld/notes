@@ -1,4 +1,5 @@
 <script lang="ts">
+	import OverviewTag from '$lib/components/tags/overview-tag.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -9,9 +10,7 @@
 	<ul class="flex flex-wrap justify-start gap-4">
 		{#each data.tags as tag}
 			<li>
-				<a class="underline transition hover:text-skin-accent" href="/tags/{tag}"
-					>{tag} ({data.postByTag[tag].length})</a
-				>
+				<OverviewTag {tag} amount={data.postByTag[tag].length} />
 			</li>
 		{/each}
 	</ul>
