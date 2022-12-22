@@ -1,8 +1,6 @@
 tasks:
   - init: pnpm install
-    command: npm run dev
-    before: |
-      npm i -g pnpm
+    command: pnpm dev
       
 github:
   prebuilds:
