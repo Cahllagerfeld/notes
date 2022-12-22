@@ -10,3 +10,4 @@ src/routes/notes/.obsidian/
 src/routes/notes/**/*.md
 src/routes/(notes)/.obsidian/
 src/routes/(notes)/**/*.md
+.histoire/
