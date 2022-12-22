@@ -1,5 +1,6 @@
 import type { PageLoad } from './$types';
 import slugify from 'slugify';
+import type { Frontmatter } from '$lib/types';
 
 export const load: PageLoad = async ({ params }) => {
 	const slug = params.slug;
@@ -12,7 +13,7 @@ export const load: PageLoad = async ({ params }) => {
 		}
 	);
 
-	const postByTag = {};
+	const postByTag: { [key: string]: Frontmatter[] } = {};
 
 	metadata.map((data) => {
 		const { tags } = data;
