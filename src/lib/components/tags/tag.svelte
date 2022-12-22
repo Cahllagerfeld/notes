@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let tag: string;
-	export let amount: number;
+	export let amount = 0;
 </script>
 
 <a
@@ -11,5 +11,7 @@
 		<span class="text-skin-off-contrast dark:text-zinc-600">#</span>
 		<span class="text-skin-text">{tag}</span>
 	</div>
-	<span class="-mr-2 bg-skin-accent px-2 text-white">{amount}</span>
+	{#if amount != 0}
+		<span class="-mr-2 bg-skin-accent px-2 text-white">{amount}</span>
+	{/if}
 </a>

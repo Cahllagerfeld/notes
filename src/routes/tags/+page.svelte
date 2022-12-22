@@ -1,5 +1,5 @@
 <script lang="ts">
-	import OverviewTag from '$lib/components/tags/overview-tag.svelte';
+	import OverviewTag from '$lib/components/tags/tag.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

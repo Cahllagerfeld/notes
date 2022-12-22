@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Tag from './tag.svelte';
+	import Tag from '$lib/components/tags/tag.svelte';
 	import { convertToDate } from '$lib/util/helpers';
 	export let tags: string[];
 	export let title: string;
@@ -11,7 +11,7 @@
 	<div class="text-right">created at: {convertToDate(created).toLocaleDateString('en-US')}</div>
 	<div class="flex flex-wrap gap-2">
 		{#each tags as tag}
-			<Tag label={tag} />
+			<Tag {tag} />
 		{/each}
 	</div>
 	<slot />
