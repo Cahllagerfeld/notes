@@ -1,6 +1,6 @@
 ---
 title: Preview Environment
-tags: [deployment, vercel, netlify]
+tags: [deployment, hosting]
 created: 24-05-2022
 ---
 

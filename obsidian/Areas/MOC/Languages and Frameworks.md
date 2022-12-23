@@ -1,6 +1,6 @@
 ---
-title: Programming languages MOC
-tags: [languages, MOC, frameworks]
+title: Languages and Frameworks MOC
+tags: [language, MOC, frameworks]
 created: 13-05-2022
 ---
 Welcome to the languages MOC. It is for topics related to programming languages
@@ -10,7 +10,8 @@ Welcome to the languages MOC. It is for topics related to programming languages
 [[Node.js]] - asynchronous event-driven JavaScript runtime  
 
 ## List of Frameworks
-[[Sveltekit]] - Application Framework for Svelte
+[[SvelteKit]] - Application Framework for Svelte
 
 ## List of Libraries
+[[Svelte]] - Compiler for building user interfaces  
 [[Tailwind]] - utility-first CSS framework
