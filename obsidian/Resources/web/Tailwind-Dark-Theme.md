@@ -1,6 +1,6 @@
 ---
 title: Tailwind Dark Theme
-tags: [tailwind, css, dark]
+tags: [tailwind, css]
 created: 27-05-2022
 ---
 

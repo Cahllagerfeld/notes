@@ -1,6 +1,6 @@
 ---
 title: Vercel Limits
-tags: [vercel, hosting, frontend, serverless]
+tags: [vercel, hosting]
 created: 14-05-2022
 ---
 

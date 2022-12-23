@@ -1,6 +1,6 @@
 ---
 title: Golang
-tags: [language, golang, google]
+tags: [language]
 created: 18-06-2022
 ---
 

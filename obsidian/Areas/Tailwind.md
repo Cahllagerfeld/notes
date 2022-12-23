@@ -1,6 +1,6 @@
 ---
 title: Tailwind
-tags: [tailwind, css, library]
+tags: [tailwind, css]
 created: 27-05-2022
 ---
 

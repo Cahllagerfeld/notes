@@ -1,6 +1,6 @@
 ---
 title: Gitpod
-tags: [tools, cloud, ephemeral]
+tags: [tools, gitpod]
 created: 16-05-2022
 ---
 
