@@ -5,7 +5,7 @@ created: 29-06-2022
 ---
 For adding themes, universal classes need to be applied to the html-markup. In clear words this means, you shouldn't use the [[Tailwind]]-class `text-red-700`, because this value is not dynamic, depending on the selected theme.
 
-Instead we declare CSS variables with the following syntax in the file where the [[Tailwind]] layers are defined:
+Instead, we declare CSS variables with the following syntax in the file where the [[Tailwind]] layers are defined:
 ```css
 :root{
 	--color-primary: #8d0000
