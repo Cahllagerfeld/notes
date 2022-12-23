@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Areas/Tools.md",
+                "file": "Areas/MOC/Tools.md",
                 "mode": "source",
                 "source": true
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Areas/SvelteKit.md",
+                "file": "Areas/MOC/Tools.md",
                 "mode": "source",
                 "source": true
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#MOC",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/SvelteKit.md",
+                "file": "Areas/MOC/Tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,15 +110,15 @@
   },
   "active": "c162e30caf31860d",
   "lastOpenFiles": [
-    "Areas/Languages and Frameworks.md",
-    "Areas/SvelteKit.md",
-    "Svelte.md",
-    "Areas/Best Practices.md",
-    "Areas/Tools.md",
-    "Areas/Tailwind.md",
+    "Areas/MOC/Languages and Frameworks.md",
     "index.md",
     "005 Active MOC.md",
-    "Resources/web/Vercel-getting-started.md",
-    "Resources/web/Vercel-Build-Capacity.md"
+    "Areas/MOC/Best Practices.md",
+    "Areas/MOC/Tools.md",
+    "Areas/Tailwind.md",
+    "Areas/SvelteKit.md",
+    "Areas/Preview Environment.md",
+    "Areas/Golang.md",
+    "Areas/Gitpod.md"
   ]
 }
