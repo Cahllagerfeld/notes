@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Areas/Tools.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "c162e30caf31860d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Areas/SvelteKit.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Areas/SvelteKit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,17 +108,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e38fa41c64048c05",
+  "active": "c162e30caf31860d",
   "lastOpenFiles": [
+    "Areas/Languages and Frameworks.md",
+    "Areas/SvelteKit.md",
+    "Svelte.md",
+    "Areas/Best Practices.md",
+    "Areas/Tools.md",
+    "Areas/Tailwind.md",
+    "index.md",
     "005 Active MOC.md",
     "Resources/web/Vercel-getting-started.md",
-    "Resources/web/Vercel-Build-Capacity.md",
-    "Resources/web/Theming with Tailwind.md",
-    "Resources/web/Tailwind-Dark-Theme.md",
-    "Resources/web/Configure Gitpod.md",
-    "Areas/Gitpod.md",
-    "Resources/web/Cloudinary-Svelte-Society-Stream.md",
-    "Areas/Vercel.md",
-    "Areas/Tools.md"
+    "Resources/web/Vercel-Build-Capacity.md"
   ]
 }
