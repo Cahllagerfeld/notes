@@ -5,25 +5,40 @@
 
 @layer base {
 	:root {
-		--color-background: #f9f9f9;
-		--color-text: #27272a;
-		--color-text-highlight: #2b2a2a;
-		--color-off-background: #e1e1e1;
-		--color-accent: #8d0000;
+		--accent-100: #bf0000;
+		--accent-200: #e46d6d;
+		--accent-300: #ffc1c1;
+
+		--neutral-000: #141414;
+		--neutral-100: #1d1d1d;
+		--neutral-200: #333333;
+		--neutral-300: #645f5f;
+		--neutral-400: #7a7474;
+		--neutral-500: #aaa1a1;
+		--neutral-600: #d0c6c6;
+		--neutral-700: #e2dddd;
+		--neutral-800: #f3f2f2;
+		--neutral-900: #f9f9f9;
+
+		--color-background: var(--neutral-900);
+		--color-text: var(--neutral-200);
+		--color-text-highlight: var(--neutral-100);
+		--color-off-background: var(--neutral-800);
+		--color-accent: var(--accent-100);
 		--color-off-contrast: #bfbfbf;
-		--color-contrast: #2b2a2a;
-		--color-off: #ececec;
+		--color-contrast: var(--neutral-100);
+		--color-off: var(--neutral-800);
 	}
 
 	.dark {
-		--color-background: #1d1d1d;
-		--color-text: #ffffff99;
-		--color-text-highlight: #ffffffde;
-		--color-off-background: #333333;
-		--color-accent: #bf0000;
-		--color-off-contrast: #bfbfbf;
-		--color-contrast: #ececec;
-		--color-off: #ececec;
+		--color-background: var(--neutral-100);
+		--color-text: var(--neutral-500);
+		--color-text-highlight: var(--neutral-800);
+		--color-off-background: var(--neutral-200);
+		--color-accent: var(--accent-100);
+		--color-off-contrast: var(--neutral-500);
+		--color-contrast: var(--neutral-800);
+		--color-off: var(--neutral-800);
 	}
 
 	body {
