@@ -11,7 +11,7 @@
 >
 	<div class="px-4">
 		<div class="mx-auto flex h-16 items-center justify-between lg:container">
-			<a class="text-4xl no-underline dark:text-skin-text-highlight" href="/">Julian's Page 🌴</a>
+			<a class="text-4xl text-skin-text-highlight no-underline" href="/">Julian's Page 🌴</a>
 			<Navigation />
 		</div>
 	</div>
