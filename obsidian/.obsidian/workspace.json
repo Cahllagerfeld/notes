@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "c3b9f8dd450f94d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resources/web/Tailwind glowing gradient effect.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/web/Vercel-Build-Capacity.md",
+                "file": "Resources/web/Tailwind glowing gradient effect.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,17 +119,17 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "c162e30caf31860d",
+  "active": "c3b9f8dd450f94d2",
   "lastOpenFiles": [
-    "Resources/web/Vercel-getting-started.md",
-    "Resources/web/Vercel-Build-Capacity.md",
     "Resources/web/Theming with Tailwind.md",
-    "Resources/web/Tailwind-Dark-Theme.md",
     "Resources/web/Configure Gitpod.md",
+    "Resources/web/Tailwind glowing gradient effect.md",
+    "Resources/web/Tailwind-Dark-Theme.md",
+    "Resources/web/Vercel-Build-Capacity.md",
+    "Resources/web/Vercel-getting-started.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
     "Areas/Vercel.md",
     "Areas/Tailwind.md",
-    "Areas/SvelteKit.md",
-    "Areas/Preview Environment.md"
+    "Areas/SvelteKit.md"
   ]
 }
