@@ -1,7 +1,7 @@
 tasks:
   - init: pnpm install
     command: pnpm dev
-      
+
 github:
   prebuilds:
     master: true
