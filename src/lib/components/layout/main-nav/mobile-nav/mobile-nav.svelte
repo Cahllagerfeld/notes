@@ -25,7 +25,7 @@
 
 {#if $showMobileMenu}
 	<div
-		class="absolute z-10 flex max-h-screen w-screen flex-col items-center bg-[#f9f9f9] shadow-md "
+		class="absolute z-10 flex max-h-screen w-screen flex-col items-center bg-skin-background shadow-md "
 	>
 		<ul class="w-full divide-y divide-skin-off-contrast border-t border-skin-off-contrast">
 			<li class="flex items-center justify-center py-4"><Search /></li>
