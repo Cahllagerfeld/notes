@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Resources/web/Tailwind glowing gradient effect.md",
+                "file": "Areas/Tailwind.md",
                 "mode": "source",
                 "source": true
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources/web/Tailwind glowing gradient effect.md",
+                "file": "Areas/Tailwind.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,9 +121,9 @@
   },
   "active": "c3b9f8dd450f94d2",
   "lastOpenFiles": [
+    "Resources/web/Tailwind glowing gradient effect.md",
     "Resources/web/Theming with Tailwind.md",
     "Resources/web/Configure Gitpod.md",
-    "Resources/web/Tailwind glowing gradient effect.md",
     "Resources/web/Tailwind-Dark-Theme.md",
     "Resources/web/Vercel-Build-Capacity.md",
     "Resources/web/Vercel-getting-started.md",
