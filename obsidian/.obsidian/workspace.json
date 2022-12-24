@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Areas/Tailwind.md",
-                "mode": "source",
+                "file": "Resources/web/Tailwind glowing gradient effect.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Areas/Tailwind.md",
+                "file": "Resources/web/Tailwind glowing gradient effect.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,6 +121,7 @@
   },
   "active": "c3b9f8dd450f94d2",
   "lastOpenFiles": [
+    "Areas/Tailwind.md",
     "Resources/web/Tailwind glowing gradient effect.md",
     "Resources/web/Theming with Tailwind.md",
     "Resources/web/Configure Gitpod.md",
@@ -129,7 +130,6 @@
     "Resources/web/Vercel-getting-started.md",
     "Resources/web/Cloudinary-Svelte-Society-Stream.md",
     "Areas/Vercel.md",
-    "Areas/Tailwind.md",
     "Areas/SvelteKit.md"
   ]
 }
